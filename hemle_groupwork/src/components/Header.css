@@ -1,0 +1,35 @@
+header{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 114px;
+    padding: 30px;
+}
+.logo{
+    display: flex;
+    align-items: center;
+
+}
+.items{
+    margin-left: 164px;
+    display: flex;
+    align-items: center;
+}
+.items nav ul{
+    display: flex;
+    align-items: center;
+}
+.items nav ul li{
+    margin-left: 40px;
+}
+.prestation{
+    display: flex;
+    align-items: center;
+}
+.button{
+    margin-left: 164px;
+    align-items: center;
+}
+.buttonchild{
+    margin-left: 40px;
+}
