@@ -12,7 +12,7 @@ const Header = () => {
     return(
         <header>
             <Link to={'/'}>
-                <img className={'logo'} alt={'Logo Hemlè'} src={logo1}/>
+                <img className={'logo'} alt={'Logo AF'} src={logo1}/>
             </Link>
             <ul className={'items'}>
                 <li>ACCUEIL</li>
@@ -25,12 +25,14 @@ const Header = () => {
                     <Link className={'prestation'} to="/about">A PROPOS</Link>
                 </li>
             </ul>
-            <div className={'button'}>
-                <FaSearch className={'buttonchild'} size='1.5rem'/>
-                <MdLanguage className={'buttonchild'} size='2rem'/>
-                <button className={'buttonchild1'}>SE CONNECTER</button>
+            <div className="icons">
+                <FaSearch className={'search'} size='1.5rem'/>
+                <div className={'button'}>
+                    <MdLanguage className={'buttonchild'} size='2rem'/>
+                    <button className={'buttonchild1'}>SE CONNECTER</button>
+                </div>
+                {!open ? <FaBars className={'menu'} onClick={()=>setOpen(!open)}/> : <MdClose className={'menu'} onClick={()=>setOpen(!open)}/>}
             </div>
-            {open ? <FaBars className={'menu'} onClick={()=>setOpen(!open)}/> : <MdClose className={'menu'} onClick={()=>setOpen(!open)}/>}
         </header>
     )
 }

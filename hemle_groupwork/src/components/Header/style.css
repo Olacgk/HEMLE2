@@ -17,7 +17,6 @@ header{
 .items{
     display: flex;
     align-items: center;
-    /*margin: 0 170px;*/
 }
 .items li{
     margin: 0 20px;
@@ -37,6 +36,10 @@ header{
     display: flex;
     align-items: center;
 }
+.icons{
+    display: flex;
+    align-items: center;
+}
 .buttonchild{
     margin: 0 30px;
 }
@@ -48,17 +51,25 @@ header{
     border-radius: 10px;
     background: transparent;
     color: white;
+    font-weight: bold;
 }
 .menu{
     display: none;
 }
 
-@media (max-width: 576px) {
+@media (max-width: 992px) {
     .items, .button{
         display: none;
     }
     .menu{
         display: flex;
         font-size: 2rem;
+    }
+    .logo{
+        width: 90px;
+        height: 25px;
+    }
+    .icons{
+        
     }
 }
