@@ -14,10 +14,10 @@ const Header = () => {
             <Link to={'/'}>
                 <img className={'logo'} alt={'Logo AF'} src={logo1}/>
             </Link>
-            <ul className={'items'}>
-                <li>ACCUEIL</li>
+            <ul className={!open ? 'items': 'items active'}>
+                <li>FIL D'ACTUALITE</li>
                 <li className={'prestation'}>
-                    <p>PAYS/CLUBS</p>
+                    <p>PAYS / CLUBS </p>
                     <AiOutlineDown/>
                 </li>
                 <li>ETOILE D'OR </li>
@@ -27,10 +27,8 @@ const Header = () => {
             </ul>
             <div className="icons">
                 <FaSearch className={'search'} size='1.5rem'/>
-                <div className={'button'}>
-                    <MdLanguage className={'buttonchild'} size='2rem'/>
-                    <button className={'buttonchild1'}>SE CONNECTER</button>
-                </div>
+                <MdLanguage className={'translate'} size='2rem'/>
+                <button className={'login'}>SE CONNECTER</button>
                 {!open ? <FaBars className={'menu'} onClick={()=>setOpen(!open)}/> : <MdClose className={'menu'} onClick={()=>setOpen(!open)}/>}
             </div>
         </header>

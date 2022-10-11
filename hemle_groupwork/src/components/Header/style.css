@@ -15,35 +15,31 @@ header{
 
 }
 .items{
-    display: flex;
-    align-items: center;
-}
-.items li{
-    margin: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-gap: 50px;
     text-align: center;
     letter-spacing: 1px;
     font-weight: bold;
 }
+
 .prestation{
     display: flex;
-    align-items: center;
     cursor: pointer;
+}
+.prestation p{
+    margin-right: 10px;
 }
 .prestation:hover{
     color: #009741;
 }
-.button{
-    display: flex;
-    align-items: center;
-}
 .icons{
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-gap: 40px;
     align-items: center;
 }
-.buttonchild{
-    margin: 0 30px;
-}
-.buttonchild1{
+.login{
     margin-left: 30px;
     width: 129px;
     height: 54px;
@@ -57,19 +53,24 @@ header{
     display: none;
 }
 
-@media (max-width: 992px) {
-    .items, .button{
-        display: none;
+@media screen and (max-width: 992px) {
+    .items{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 15%;
+        left: -100%;
+    }
+    .items.active{
+        left: 0;
     }
     .menu{
         display: flex;
         font-size: 2rem;
     }
-    .logo{
-        width: 90px;
-        height: 25px;
-    }
-    .icons{
-        
+    .search{
+        margin-right: 60px;
     }
 }
