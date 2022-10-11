@@ -1,6 +1,6 @@
 import React from "react";
 import './style.css'
-import {FiRadio} from "react-icons/fi";
+import {GiSpeaker} from "react-icons/gi";
 import {MdOpenInFull, MdOutlineShare} from "react-icons/md";
 import {AiOutlineClockCircle} from "react-icons/ai";
 import cover from '../../assets/podcastCover.png';
@@ -24,12 +24,12 @@ const PodcastDesc = () => {
                 <div className={'bouton'}>
                     <button className={'play'}>
                         A L'ECOUTE
-                        <FiRadio/>
+                        <GiSpeaker size={'1rem'}/>
                     </button>
-                    <div className={'flex space-x-3'}>
-                        <MdOpenInFull  className={'h-[24px] w-[24px] cursor-pointer'}/>
-                        <AiOutlineClockCircle className={'h-[24px] w-[24px]'}/>
-                        <MdOutlineShare className={'h-[24px] w-[24px]'}/>
+                    <div className={'action'}>
+                        <MdOpenInFull className="action1"/>
+                        <AiOutlineClockCircle className="action2"/>
+                        <MdOutlineShare className="action3"/>
                     </div>
 
                 </div>

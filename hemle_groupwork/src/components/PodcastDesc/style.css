@@ -93,4 +93,20 @@
     width: 146px;
     height: 46px;
     gap: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 40px;
+    color: #FFFF27;
+}
+.action{
+    font-size: 30px;
+}
+.action1{
+    margin: 0 10px;
+}
+.action2{
+    margin: 0 10px;
+}
+.action3{
+    margin: 0 10px;
 }
