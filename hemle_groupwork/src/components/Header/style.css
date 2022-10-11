@@ -28,6 +28,7 @@ header{
 .prestation{
     display: flex;
     align-items: center;
+    cursor: pointer;
 }
 .prestation:hover{
     color: #009741;
@@ -48,9 +49,16 @@ header{
     background: transparent;
     color: white;
 }
+.menu{
+    display: none;
+}
 
 @media (max-width: 576px) {
-    .items, button{
+    .items, .button{
         display: none;
+    }
+    .menu{
+        display: flex;
+        font-size: 2rem;
     }
 }
