@@ -1,15 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './styles/index.css';
+import './index.css';
 import App from './App';
+import {BrowserRouter, Route, Routes} from "react-router-dom";
+import About from "./components/About";
 
-<<<<<<< HEAD
-const root = ReactDOM.createRoot(document.getElementById('root'));
-=======
 const root = ReactDOM.createRoot(document.getElementById( 'root'));
->>>>>>> d2b5238dd2ed703b40ec47326d3063586a152b2e
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+    <BrowserRouter>
+        <Routes>
+            <Route path="/" element={<App />} />
+            <Route path="/about" element={<About />} />
+        </Routes>
+    </BrowserRouter>
 );
