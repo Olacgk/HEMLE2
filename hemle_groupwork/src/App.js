@@ -1,11 +1,16 @@
 import React from "react"
-import Header from "./components/Header";
+import {BrowserRouter, Route, Routes} from "react-router-dom";
+import About from "./components/About";
+import Podcasts from "./pages/podcasts";
 
 const App = () => {
   return (
-      <div>
-          <Header/>
-      </div>
+      <BrowserRouter>
+          <Routes>
+              <Route path="/" element={<Podcasts />} />
+              <Route path="/about" element={<About />} />
+          </Routes>
+      </BrowserRouter>
   );
 }
 
