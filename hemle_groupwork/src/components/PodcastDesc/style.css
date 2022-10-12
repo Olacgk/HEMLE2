@@ -1,5 +1,5 @@
 .description{
-    margin: 50px 30px;
+    margin: 50px 60px;
     display: flex;
     align-content: center;
     gap: 30px;
@@ -89,13 +89,13 @@
     justify-content: center;
     border: 1px solid #FFFF27;
     border-radius: 4px;
-    padding: 10px 24px;
-    width: 146px;
+    padding: 10px 10px;
+    width: 150px;
     height: 46px;
     gap: 8px;
     font-size: 14px;
     font-weight: 600;
-    line-height: 40px;
+    letter-spacing: 1px;
     color: #FFFF27;
 }
 .action{
