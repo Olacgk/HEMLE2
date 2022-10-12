@@ -98,6 +98,10 @@
     letter-spacing: 1px;
     color: #FFFF27;
 }
+.play:hover{
+    background-color: #FFFF27;
+    color: black;
+}
 .action{
     font-size: 30px;
 }
@@ -109,4 +113,36 @@
 }
 .action3{
     margin: 0 10px;
+}
+
+@media (max-width:992px) {
+    .description{
+        display: grid;
+        grid-template-columns: repeat(1, auto);
+        grid-gap: 30px;
+        margin: 25px 30px;
+    }
+    .cover{
+        width: 100%;
+        height: auto;
+    }
+    .textDesc{
+        padding-bottom: 20px;
+    }
+}
+
+@media (min-width: 992px) {
+    /* .description{
+        display: grid;
+        grid-template-columns: repeat(1, auto);
+        grid-gap: 30px;
+        margin: 25px 30px;
+    } */
+    .cover{
+        width: 464px;
+        height: auto;
+    }
+    .textDesc{
+        padding-bottom: 20px;
+    }
 }
