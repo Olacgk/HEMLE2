@@ -12,8 +12,8 @@ const Playlist = () => {
 
   return(
       <div>
-          <div className={'md:px-[60px] px-[30px] mt-[40px]'}>
-              <p className={'w-full h-[70px] border-b-2 border-[#A0A19F] text-[36px] text-white font-semibold'}>Playlist</p>
+          <div className={'container'}>
+              <p className={'playlist'}>Playlist</p>
               {
                   playlistContent.map( playlist => {
                       return (

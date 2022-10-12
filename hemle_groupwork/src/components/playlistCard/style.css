@@ -12,7 +12,7 @@
     align-items: center;
     justify-content: space-between;
 }
-.cover{
+.castCover{
     width: 101px;
     height: 99px;
 }
@@ -38,4 +38,19 @@
 .name{
     font-size: 16px;
     line-height: 32px;
+}
+.dot{
+    color: #A0A19F;
+    font-size: 25px;
+}
+.date{
+    line-height: 32px;
+    font-size: 16px;
+    line-height: 32px;
+}
+.listAction{
+    display: flex;
+    gap: 20px;
+    color: white;
+    font-size: 25px;
 }
