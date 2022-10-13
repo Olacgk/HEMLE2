@@ -54,3 +54,29 @@
     color: white;
     font-size: 25px;
 }
+
+@media (max-width: 768px) {
+    .listAction{
+        display: none;
+    }
+    .content{
+        height: auto;
+    }
+    .castCover{
+        height: auto;
+    }
+}
+
+@media (max-width:576px) {
+    .firstPart{
+        display: block;
+        text-align: center;
+    }
+    .castCover{
+        width: auto;
+        height: 99px;
+    }
+    .detail{
+        display: block;
+    }
+}
