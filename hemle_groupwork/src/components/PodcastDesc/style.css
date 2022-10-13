@@ -104,10 +104,11 @@
 }
 .action{
     font-size: 30px;
+    display: flex;
 }
-.action1{
+/* .action1{
     margin: 0 10px;
-}
+} */
 .action2{
     margin: 0 10px;
 }

@@ -1,10 +1,13 @@
 import React from "react";
 import './style.css'
 import {GiSpeaker} from "react-icons/gi";
-import {MdOpenInFull, MdOutlineShare} from "react-icons/md";
+import { MdOutlineShare} from "react-icons/md";
 import {AiOutlineClockCircle} from "react-icons/ai";
 import cover from '../../assets/podcastCover.png';
+import Modal from "react-modal";
+import Fullscreen from "../Fullscreen";
 
+Modal.setAppElement("#root");
 const PodcastDesc = () => {
     return(
         <div className="description">
@@ -27,7 +30,7 @@ const PodcastDesc = () => {
                         <GiSpeaker size={'1rem'}/>
                     </button>
                     <div className={'action'}>
-                        <MdOpenInFull className="action1"/>
+                        <Fullscreen/>
                         <AiOutlineClockCircle className="action2"/>
                         <MdOutlineShare className="action3"/>
                     </div>
