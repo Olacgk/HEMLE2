@@ -1,14 +1,19 @@
 import React from "react";
-import Header from "../Header";
 import WhoWeAre from "../WhoWeAre";
+import Options from "../Options";
+import OurGoals from "../OurGoals";
+import OurTeams from "../OurTeams";
+import OurFriends from "../OurFriends";
 
-function About()
-{
+function About() {
   return (
-    <div>
-        <Header />
+    <React.Fragment>
         <WhoWeAre/>
-    </div>
+        <Options />
+        <OurGoals />
+        <OurTeams />
+        <OurFriends />
+    </React.Fragment>
   );
 }
 

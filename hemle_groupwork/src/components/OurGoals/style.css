@@ -1,0 +1,88 @@
+#ourGoals {
+    display: flex;
+    flex-direction: column;
+}
+
+#ourGoals .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+#ourGoals .title {
+    position: absolute;
+    top: 3em;
+}
+
+
+
+
+#ourGoals .article {
+    max-width:30em;
+    font-family: "Roboto";
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+}
+
+#ourGoals .article p {
+    margin:1em 0;
+}
+
+#ourGoals .article a {
+    color: #009741;
+    text-decoration: underline;
+}
+
+
+
+
+#ourGoals .images {
+    border-image-source:url(../../assets/tools/bar.png);
+    padding: 1em;
+    border: 2px solid black;
+    margin: 3em 0;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+}
+
+#ourGoals .images .img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+
+    width: 30em;
+    height: 30em;
+    overflow: hidden;
+}
+
+#ourGoals .images img {
+    height: 100%;
+}
+
+@media all and (max-width: 70em) {
+    #ourGoals .content {
+        flex-direction: column-reverse;
+    }
+    #ourGoals .title {
+        position: relative;
+        top: 0;
+    }
+    #ourGoals .content {
+        align-items: center;
+    }
+    #ourGoals .article {
+        max-width: 60em;
+        margin: 0 2em;
+    }
+}
+@media all and (max-width: 40em) {
+    #ourGoals .images .img {
+        width: 20em;
+        height: 20em;
+    }
+}

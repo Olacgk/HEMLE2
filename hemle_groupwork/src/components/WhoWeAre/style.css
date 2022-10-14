@@ -1,8 +1,85 @@
+
 #WhoWeAre {
-    display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    padding-top: 4em;
 }
 
+#WhoWeAre .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+#WhoWeAre h2 {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 34px;
+    line-height: 67px;
+    color: black;
+}
+
+
+
+
+
 #WhoWeAre .article {
-    width:30em;
+    max-width:30em;
+    font-family: "Roboto";
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    /*background: red;*/
+}
+
+#WhoWeAre .article p {
+    margin:1em 0;
+    color: black;
+}
+
+#WhoWeAre .article a {
+    color: #009741;
+    text-decoration: underline;
+}
+
+
+
+
+#WhoWeAre .images {
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    min-height: 23em;
+}
+
+#WhoWeAre .images aside {
+    width: 7em;
+    height: 14em;
+    margin: 0 1.5em;
+    border-radius: 5px 10px;
+    transform: skew(-23deg);
+    overflow: hidden;
+    padding: 0;
+}
+
+#WhoWeAre .images aside:nth-child(2) {
+    scale:1.5;
+}
+
+#WhoWeAre .images img {
+    transform:skew(23deg);
+    margin-left: -2em;
+}
+
+
+@media all and (max-width: 80em) {
+    #WhoWeAre .content {
+        align-items: center;
+        flex-direction: column-reverse;
+        max-width: auto;
+        width: 100%;
+    }
+    #WhoWeAre .article {
+        max-width: 50em;
+        margin: 0 1em;
+    }
 }

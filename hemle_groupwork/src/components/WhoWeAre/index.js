@@ -1,8 +1,8 @@
 import React from "react";
 
-import foot0 from "../../assets/aside/foot0.png"
-import foot1 from "../../assets/aside/foot1.png"
-import foot2 from "../../assets/aside/foot2.png"
+import img1 from "../../assets/home/person1.png"
+import img2 from "../../assets/home/person2.png"
+import img3 from "../../assets/home/person3.png"
 import bar from "../../assets/tools/bar.png"
 
 import "./style.css"
@@ -11,26 +11,31 @@ const WhoWeAre = () => {
     return(
         <section id="WhoWeAre">
             
-            <div class="article">
+            <div class="title">
                 <h2> Qui sommes-nous ? </h2>
-                <img src={bar} alt='multicolor bar'/>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dignissim blandit arcu nisl
-                    erat sit urna. Eget et ut quam malesuada congue. Justo venenatis ac nisi adipiscing
-                    blandit viverra tincidunt est luctus. Et quam tincidunt venenatis, commodo proin et.
-                    Tortor, <span>dignissim blandit</span> dui. Velit praesent turpis quam nam magna.
-                </p> <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dignissim blandit arcu nisl
-                    erat sit urna. Eget et ut quam malesuada congue. Justo venenatis ac nisi adipiscing
-                    blandit viverra tincidunt est luctus. Et quam tincidunt venenatis, commodo proin et.
-                    Tortor, <span>dignissim blandit</span> dui. Velit praesent turpis quam nam magna.
-                </p>
+                <img src={bar} className="bar" alt='multicolor bar'/>
             </div>
-            
-            <div classe="images">
-                <img src={foot0} alt=''/>
-                <img src={foot1} alt=''/>
-                <img src={foot2} alt=''/>
+
+            <div class="content">
+                <div class="article">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. <a href=''> Dignissim blandit
+                        </a> arcu nisl erat sit urna. Eget et ut quam malesuada congue. Justo venenatis ac nisi adipiscing
+                        blandit viverra tincidunt est luctus. Et quam tincidunt venenatis, commodo proin et.
+                        Tortor, <span>dignissim blandit</span> dui. Velit praesent turpis quam nam magna.
+                    </p> <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. <a href=''> Dignissim blandit
+                        </a> arcu nisl erat sit urna. Eget et ut quam malesuada congue. Justo venenatis ac nisi adipiscing
+                        blandit viverra tincidunt est luctus. Et quam tincidunt venenatis, commodo proin et.
+                        Tortor, <span>dignissim blandit</span> dui. Velit praesent turpis quam nam magna.
+                    </p>
+                </div>
+                
+                <div class="images">
+                    <aside> <img src={img1} alt=''/> </aside>
+                    <aside> <img src={img2} alt=''/> </aside>
+                    <aside> <img src={img3} alt=''/> </aside>
+                </div>
             </div>
         
         </section>

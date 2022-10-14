@@ -1,0 +1,42 @@
+#OurFriends {
+    display: flex;
+    flex-direction: column;
+}
+
+#OurFriends .content {
+    flex-direction: column;
+}
+
+
+
+#OurFriends .article {
+    width:100%;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+}
+
+#OurFriends .article p {
+    margin:1em 0;
+    color: black;
+}
+
+
+#OurFriends .images {
+    border-image-source:url(../../assets/tools/bar.png);
+    height: 10em;
+    overflow-x: hidden;
+}
+
+#OurFriends .images .imgs {
+    height: 110%;
+    overflow-x: auto;
+
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+#OurFriends .images img {
+    margin: 2em 5em;
+}
