@@ -21,6 +21,7 @@ const Fullscreen = () =>{
             <MdOpenInFull onClick={()=>setOpenModal(true)} />
             <Modal className={'fullscreenMod'} isOpen={openModal}>
                 <Header />
+                <div className="fullscreenBackground"></div>
                 <div className="modalContent">
                     <div className="sectionBouton">
                         <BiArrowBack onClick={()=>setOpenModal(false)} size={'2rem'}/>
@@ -31,7 +32,7 @@ const Fullscreen = () =>{
                 </div>
                 <div className="fullscreenPlayer">
                     <div>5:26 / 8:00</div>
-                    <ProgressBar bgcolor={'#FF462D'} completed={75}/>
+                    <ProgressBar className="fullscreenProgress" bgcolor={'#FF462D'} completed={75}/>
                     <div className="fullbuttonPlayer">
                         <div className="fullbutton1">
                             <FaPlay size={'1.25rem'}/>

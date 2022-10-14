@@ -5,8 +5,10 @@ import './style.css'
 
 
 const PlaylistCard = ({id, photo, title, date, handleClick, ...props}) => {
+
+
     return(
-        <div className="content">
+        <div className="content" onClick={props.onClick}>
             <div className={'cardInfo'}>
               <div className={'firstPart'}>
                   <img alt={'podcsat view'} src={photo} className={'castCover'}/>
