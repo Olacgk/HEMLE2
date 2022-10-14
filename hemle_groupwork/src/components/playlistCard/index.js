@@ -4,7 +4,7 @@ import {MdOutlineShare} from "react-icons/md";
 import './style.css'
 
 
-const PlaylistCard = ({id, photo, title, date, handleClick, ...props}) => {
+const PlaylistCard = ({id, photo, title, date, handleClick, audio, ...props}) => {
 
 
     return(
@@ -12,6 +12,7 @@ const PlaylistCard = ({id, photo, title, date, handleClick, ...props}) => {
             <div className={'cardInfo'}>
               <div className={'firstPart'}>
                   <img alt={'podcsat view'} src={photo} className={'castCover'}/>
+                  <audio src={audio}/>
                   <div className={'textPart'}>
                       <p className={'title'}>{id}. {title}</p>
                       <div className={'detail'}>

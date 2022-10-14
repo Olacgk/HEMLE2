@@ -7,7 +7,7 @@ import './style.css'
 
 
 
-const Playerbottom = ({photo, title, ...props}) => {
+const Playerbottom = ({photo, title, id, ...props}) => {
 
 
   return(
@@ -18,7 +18,7 @@ const Playerbottom = ({photo, title, ...props}) => {
                   <img alt={'view'} src={photo} className={'coverPlayerbottom'}/>
                   <FiRadio size={"2rem"} className={"playerbottomRadiobutton buttonbottom2"}/>
                   <div className={'podcastdetail'}>
-                      <div className={'playerbottomPodcastitle buttonbottom2'}>{title}</div>
+                      <div className={'playerbottomPodcastitle buttonbottom2'}>{id}. {title}</div>
                       <div className='buttonbottom2'>Youtube/ Nom Prénom</div>
                   </div>
               </div>
