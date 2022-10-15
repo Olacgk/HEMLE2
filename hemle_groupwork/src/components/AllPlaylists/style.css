@@ -1,0 +1,30 @@
+.card{
+    height: 557px;
+    width: 404px;
+    background: #1D1D1B;
+    border-bottom: 2px solid linear-gradient(#DF251A,#E96A17,#ECC716,#58A730);
+}
+.playlistCover{
+    width: 400px;
+    height: 550px;
+}
+
+.allplaylistContainer{
+    margin-top: 60px;
+    padding: 51px 60px;
+    background: #292A2A;
+}
+.allplaylistShowMore{
+    width: 147px;
+    height: 54px;
+    border-radius: 8px;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+}
+.boutonCenter{
+    text-align: center;
+    margin: 20px 0;
+}

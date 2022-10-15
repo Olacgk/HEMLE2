@@ -1,0 +1,149 @@
+.description{
+    margin: 50px 60px;
+    display: flex;
+    align-content: center;
+    gap: 30px;
+}
+.cover{
+    width: 464px;
+    height: 325px;
+}
+.textDesc{
+    border-bottom: 3px solid #A0A19F;
+}
+.tag{
+    display: flex;
+    gap: 30px;
+    color: black;
+    margin-bottom: 20px;
+}
+.tag.first{
+    background: #FFFF27;
+    width: 42px;
+    height: 25px;
+    align-items: center;
+    font-weight: 600;
+    line-height: 20.5px;
+    font-size: 16.32px;
+    justify-content: center;
+    border-radius: 1.6px;
+}
+.tag.second{
+    background: white;
+    width: 69px;
+    height: 25px;
+    align-items: center;
+    font-weight: 600;
+    line-height: 20.5px;
+    font-size: 16.32px;
+    justify-content: center;
+    border-radius: 1.6px;
+}
+.title{
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 36px;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+.desc{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: 1px;
+    margin-bottom: 17px;
+}
+.someDetail{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 17px;
+}
+.name{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 32px;
+    letter-spacing: 1px;
+}
+.dot{
+    color: #A0A19F;
+    font-size: 25px;
+}
+.date{
+    color: #A0A19F;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 32px;
+    letter-spacing: 1px;
+}
+.bouton{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.play{
+    display: flex;
+    background: transparent;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #FFFF27;
+    border-radius: 4px;
+    padding: 10px 10px;
+    width: 150px;
+    height: 46px;
+    gap: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #FFFF27;
+}
+.play:hover{
+    background-color: #FFFF27;
+    color: black;
+}
+.action{
+    font-size: 30px;
+    display: flex;
+}
+/* .action1{
+    margin: 0 10px;
+} */
+.action2{
+    margin: 0 10px;
+}
+.action3{
+    margin: 0 10px;
+}
+
+@media (max-width:992px) {
+    .description{
+        display: grid;
+        grid-template-columns: repeat(1, auto);
+        grid-gap: 30px;
+        margin: 25px 30px;
+    }
+    .cover{
+        width: 100%;
+        height: auto;
+    }
+    .textDesc{
+        padding-bottom: 20px;
+    }
+}
+
+@media (min-width: 992px) {
+    /* .description{
+        display: grid;
+        grid-template-columns: repeat(1, auto);
+        grid-gap: 30px;
+        margin: 25px 30px;
+    } */
+    .cover{
+        width: 464px;
+        height: auto;
+    }
+    .textDesc{
+        padding-bottom: 20px;
+    }
+}
