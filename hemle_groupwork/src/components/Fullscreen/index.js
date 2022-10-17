@@ -5,13 +5,13 @@ import Header from '../Header'
 import {BiArrowBack, BiTime} from 'react-icons/bi'
 import {MdShare, MdOpenInFull} from 'react-icons/md'
 import ProgressBar from "../ProgressBar";
-import {FaPlay} from 'react-icons/fa';
+import {FaPause, FaPlay} from 'react-icons/fa';
 import {GiSpeaker} from 'react-icons/gi';
 import {BsChevronDoubleLeft, BsChevronDoubleRight, BsFullscreenExit} from 'react-icons/bs'
 
 
 Modal.setAppElement("#root");
-const Fullscreen = ({title, photo, next, previous}) =>{
+const Fullscreen = ({title, photo, next, previous, isplaying, playPause}) =>{
 
     const [openModal, setOpenModal] = useState(false);
 
@@ -36,7 +36,7 @@ const Fullscreen = ({title, photo, next, previous}) =>{
                             <ProgressBar className="fullscreenProgress" bgcolor={'#FF462D'} completed={75}/>
                             <div className="fullbuttonPlayer">
                         <div className="fullbutton1">
-                            <FaPlay size={'1.25rem'}/>
+                            {!isplaying ? <FaPlay onClick={playPause} size={'1.25rem'}/> : <FaPause onClick={playPause} size={'1.25rem'}/>}
                             <GiSpeaker size={'1.25rem'}/>
                             <BiTime size={'1.25rem'}/>
                         </div>

@@ -21,16 +21,6 @@ const Playlist = ({handleClick}) => {
           <div className={'container'}>
               <p className={'playlist'}>Playlist</p>
               {
-                //   playlistContent.filter(playlist => playlist.id <= 6).map( playlist => {
-                //       return (
-                //           <PlaylistCard key={playlist.id} onClick={()=>{handleClick(playlist.id)}} date={playlist.date} id={playlist.id} photo={playlist.photo} title={playlist.title} audio={playlist.audio} />
-                //       )
-                //   } )
-                // postsToShow.map(playlist => {
-                //     return(
-                //         <PlaylistCard key={playlist.id} onClick={()=>{handleClick(playlist.id)}} date={playlist.date} id={playlist.id} photo={playlist.photo} title={playlist.title} audio={playlist.audio}/>
-                //     )
-                // })
                 playlistContent.slice(0, next)?.map(playlist =>{
                     return(
                         <PlaylistCard  key={playlist.id} onClick={()=>{handleClick(playlist.id)}} date={playlist.date} id={playlist.id} photo={playlist.photo} title={playlist.title} audio={playlist.audio}/>

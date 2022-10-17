@@ -1,18 +1,20 @@
 import React from 'react';
 import {FiRadio} from "react-icons/fi";
-import {MdOpenInFull, MdOutlineForward10, MdOutlineReplay10, MdPlayArrow} from "react-icons/md";
+import {MdOutlineForward10, MdOutlineReplay10, MdPlayArrow} from "react-icons/md";
+import { FaPause } from 'react-icons/fa';
 import {IoMdCloseCircle} from "react-icons/io";
 import ProgressBar from "../ProgressBar"
 import './style.css'
+import Fullscreen from '../Fullscreen';
 
 
 
-const Playerbottom = ({photo, title, id, ...props}) => {
+const Playerbottom = ({photo, title, id, playPause, isPlaying, next, previous, completed, clickRef, checkWidth, ...props}) => {
 
 
   return(
       <div className={'playerbottom'}>
-          <ProgressBar className="progressBarbottom" completed={25} bgcolor={'#FF462D'}/>
+          <ProgressBar checkWidth={checkWidth} className="progressBarbottom" completed={completed} bgcolor={'#FF462D'} clickRef={clickRef}/>
           <div className={"playerbottomContent"}>
               <div className={'aboutPodcast'}>
                   <img alt={'view'} src={photo} className={'coverPlayerbottom'}/>
@@ -24,9 +26,10 @@ const Playerbottom = ({photo, title, id, ...props}) => {
               </div>
               <div className={'buttonPlayerbottom'}>
                   <MdOutlineReplay10 size={'2rem'} className={'buttonbottom buttonbottom2'}/>
-                  <MdPlayArrow size={'2rem'} className={'buttonbottom'}/>
+                  {!isPlaying ? <MdPlayArrow onClick={playPause} size={'2rem'} className={'buttonbottom'}/> : <FaPause onClick={playPause} size={'2rem'} className={'buttonbottom'}/>}
                   <MdOutlineForward10 size={'2rem'} className={'buttonbottom buttonbottom2'}/>
-                  <MdOpenInFull size={'2rem'}  className={'buttonbottom buttonbottom2'}/>
+                  {/* <MdOpenInFull onClick={() => <Fullscreen/>} size={'2rem'}/> */}
+                  <Fullscreen isplaying={isPlaying} playPause={playPause} photo={photo} title={title} next={next} previous={previous} className={"buttonbottom2"}/>
                   <IoMdCloseCircle size={'2rem'} onClick={props.onClick} className={'buttonbottom'}/>
               </div>
           </div>

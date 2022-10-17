@@ -5,9 +5,11 @@ import { MdOutlineShare} from "react-icons/md";
 import {AiOutlineClockCircle} from "react-icons/ai";
 import Modal from "react-modal";
 import Fullscreen from "../Fullscreen";
+import { FaPause } from "react-icons/fa";
 
 Modal.setAppElement("#root");
-const PodcastDesc = ({id, title, photo, date, next, previous}) => {
+const PodcastDesc = ({id, title, photo, date, next, previous, isplaying, playPause}) => {
+
     return(
         <div className="description">
             <img alt={'Podcast view'} src={photo} className={'cover'}/>
@@ -24,12 +26,16 @@ const PodcastDesc = ({id, title, photo, date, next, previous}) => {
                     <div className={'date'}>{date}</div>
                 </div>
                 <div className={'bouton'}>
-                    <button className={'play'}>
+                    {!isplaying ? <button className={'play'} onClick={playPause}>
                         A L'ECOUTE
                         <GiSpeaker size={'1rem'}/>
                     </button>
+                    : <button className={'play'} onClick={playPause}>
+                    PAUSE
+                    <FaPause size={'1rem'}/>
+                </button>}
                     <div className={'action'}>
-                        <Fullscreen photo={photo} title={title} next={next} previous={previous}/>
+                        <Fullscreen isplaying={isplaying} playPause={playPause} photo={photo} title={title} next={next} previous={previous}/>
                         <AiOutlineClockCircle className="action2"/>
                         <MdOutlineShare className="action3"/>
                     </div>

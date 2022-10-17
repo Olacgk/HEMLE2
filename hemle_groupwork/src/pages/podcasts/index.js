@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useRef, useEffect} from "react";
 import Header from "../../components/Header";
 import Playerbottom from "../../components/PlayerBottom";
 import Playlist from "../../components/Playlist";
@@ -9,26 +9,82 @@ const Podcasts = () => {
 
   const [open, setOpen] = useState(false)
   const [active, setActive] = useState(playlistContent[0])
+  const [isPlaying, setIsPlaying] = useState(false)
+  // const [completed, setCompleted] = useState(0);
+
+
   const handleClick = (id)=>{
     setOpen(true)
     setActive(playlistContent[id -1])
+    togglePlayPause()
   }
 
   const nextPodcast = () =>{
-    setActive(playlistContent[active.id] )
+    // setActive(playlistContent[active.id] )
+    const index = playlistContent.findIndex(x=>x.title === active.title);
+
+    if (index === playlistContent.length-1)
+    {
+      setActive(playlistContent[0])
+    }
+    else
+    {
+      setActive(playlistContent[index + 1])
+    }
+    audioPlayer.current.currentTime = 0;
   }
   const previousPodcast = () => {
-    if (active.id > 1){
-      setActive(playlistContent[active.id -2] )
+    // if (active.id > 1){
+    //   setActive(playlistContent[active.id -2] )
+    // }
+    const index = playlistContent.findIndex(x=>x.title === active.title);
+    if (index === 0)
+    {
+      setActive(playlistContent[playlistContent.length - 1])
     }
+    else
+    {
+      setActive(playlistContent[index - 1])
+    }
+    audioPlayer.current.currentTime = 0;
   }
+
+  const audioPlayer = useRef();
+  
+  useEffect(() => {
+    if (isPlaying) {
+      audioPlayer.current.play();
+    }
+    else {
+      audioPlayer.current.pause();
+    }
+  }, [isPlaying])
+
+  const togglePlayPause = () => {
+    setIsPlaying(!isPlaying);
+  }
+
+  const clickRef = useRef()
+
+
+  const checkWidth = (e)=>
+  {
+    let width = clickRef.current.clientWidth;
+    const offset = e.nativeEvent.offsetX;
+
+    const divprogress = offset / width * 100;
+    audioPlayer.current.currentTime = divprogress / 100 * active.audio.length;
+
+  }
+
 
   return(
       <>
-        <Header /> 
-        <PodcastDesc previous={previousPodcast} next={nextPodcast} id={active.id} photo={active.photo} date={active.date} title={active.title} />
+        <Header />
+        <audio src={active.audio} ref={audioPlayer} /> 
+        <PodcastDesc playPause={togglePlayPause} isplaying={isPlaying} previous={previousPodcast} next={nextPodcast} id={active.id} photo={active.photo} date={active.date} title={active.title} />
         <Playlist handleClick={handleClick}/>
-        {open ? <Playerbottom onClick={()=> setOpen(!open)} id={active.id} photo={active.photo} title={active.title}/> : <></>}
+        {open ? <Playerbottom completed={active.audio.progress} checkWidth={checkWidth} clickRef={clickRef} isPlaying={isPlaying} playPause={togglePlayPause} onClick={()=> setOpen(!open)} id={active.id} photo={active.photo} title={active.title} next={nextPodcast} previous={previousPodcast}/> : <></>}
       </>
   )
 }

@@ -1,6 +1,7 @@
 import cover from "../assets/podcastCover.png";
 import track1 from "../assets/songs/Burna Boy - Last Last.mp3"
 import track2 from "../assets/songs/Buju_BNXN_-Kilometer_Remix_feat._Zinoleesky.mp3"
+// const track1 = "https://beardbarnmusicbucket.s3.amazonaws.com/The+Wild+Horse"
 
 
 export const playlistContent = [
@@ -35,14 +36,14 @@ export const playlistContent = [
     {
         id: 5,
         title: "CAN 2022 : face à l'Egypte, le Sénégal décroche sa première étoile",
-        date: "",
+        date: "14 Octobre 2022",
         photo: cover,
         audio: track1
     },
     {
         id: 6,
         title: "CAN 2022 : face à l'Egypte, le Sénégal décroche sa première étoile",
-        date: "",
+        date: "15 Octobre 2022",
         photo: cover,
         audio: track2
     },

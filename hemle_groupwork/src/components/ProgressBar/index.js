@@ -1,6 +1,6 @@
 import React from "react";
 
-const ProgressBar = ({ bgcolor, completed, ...props }) => {
+const ProgressBar = ({ bgcolor, completed, clickRef, checkWidth, ...props }) => {
     
   
     const containerStyles = {
@@ -12,21 +12,23 @@ const ProgressBar = ({ bgcolor, completed, ...props }) => {
   
     const fillerStyles = {
       height: '100%',
-      width: `${completed}%`,
+      minWidth: '100%',
       backgroundColor: bgcolor,
       borderRadius: 'inherit',
       textAlign: 'right'
     }
   
     const labelStyles = {
+      width: `${completed}%`,
       padding: 5,
       color: 'white',
       fontWeight: 'bold'
     }
+
   
     return (
       <div className={props.className} style={containerStyles}>
-        <div style={fillerStyles}>
+        <div style={fillerStyles} ref={clickRef} onClick={checkWidth}>
           <span style={labelStyles}></span>
         </div>
       </div>

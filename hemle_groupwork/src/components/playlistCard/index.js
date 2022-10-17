@@ -5,14 +5,13 @@ import './style.css'
 
 
 const PlaylistCard = ({id, photo, title, date, handleClick, audio, ...props}) => {
-
+    
 
     return(
         <div className="content" onClick={props.onClick}>
             <div className={'cardInfo'}>
               <div className={'firstPart'}>
                   <img alt={'podcsat view'} src={photo} className={'castCover'}/>
-                  <audio src={audio}/>
                   <div className={'textPart'}>
                       <p className={'title'}>{id}. {title}</p>
                       <div className={'detail'}>
