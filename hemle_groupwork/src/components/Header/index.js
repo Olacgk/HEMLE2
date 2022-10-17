@@ -17,7 +17,7 @@ const Header = () => {
             <ul className={!open ? 'items': 'items active'}>
                 <li>FIL D'ACTUALITE</li>
                 <li className={'prestation'}>
-                    <p>PAYS / CLUBS </p>
+                    <Link to={"/clubs"}>PAYS / CLUBS</Link>
                     <AiOutlineDown/>
                 </li>
                 <li>ETOILE D'OR </li>

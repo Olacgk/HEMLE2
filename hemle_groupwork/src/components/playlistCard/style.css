@@ -13,7 +13,7 @@
     justify-content: space-between;
 }
 .castCover{
-    width: 101px;
+    width: 99px;
     height: 99px;
 }
 .firstPart{
@@ -41,7 +41,6 @@
 }
 .dot{
     color: #A0A19F;
-    font-size: 25px;
 }
 .date{
     line-height: 32px;

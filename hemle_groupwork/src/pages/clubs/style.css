@@ -1,0 +1,52 @@
+.clubGrid{
+    align-items: center;
+    justify-content: center;
+    margin: 50px 60px;
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    grid-gap: 24px;
+}
+
+.boutoncenter{
+    text-align: center;
+}
+
+.clubShowMore{
+    cursor: pointer;
+    width: 147px;
+    height: 54px;
+    border-radius: 8px;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+    margin-bottom: 50px;
+}
+
+
+@media (max-width: 576px) {
+    .clubGrid{
+        grid-template-columns: repeat(1, auto);
+    }
+}
+@media (min-width: 576px) {
+    .clubGrid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (min-width: 768px) {
+    .clubGrid{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media (min-width: 992px) {
+    .clubGrid{
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+@media (min-width: 1200px) {
+    .clubGrid{
+        grid-template-columns: repeat(5, 1fr);
+    }
+}

@@ -88,7 +88,7 @@ const Podcasts = () => {
 
   const backTen = () => {
     clickRef.current.value = Number(clickRef.current.value - 10);
-    onPlaying();
+    setCurrentSong(clickRef.current.currentTime -10);
   }
 
   const forwardTen = () => {

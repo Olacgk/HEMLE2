@@ -53,6 +53,7 @@
     justify-content: space-between;
 }
 .fullbutton1{
+    cursor: pointer;
     display: grid;
     grid-template-columns: repeat(3, auto);
     grid-gap: 20px;

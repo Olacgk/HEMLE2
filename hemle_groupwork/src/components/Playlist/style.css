@@ -11,6 +11,7 @@
     line-height: 50.4px;
 }
 .playlistShowMore{
+    cursor: pointer;
     width: 147px;
     height: 54px;
     border-radius: 8px;

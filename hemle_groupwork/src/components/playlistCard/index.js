@@ -1,6 +1,7 @@
 import React from "react";
 import {AiOutlineClockCircle} from "react-icons/ai";
 import {MdOutlineShare} from "react-icons/md";
+import { BsDot } from "react-icons/bs";
 import './style.css'
 
 
@@ -11,12 +12,13 @@ const PlaylistCard = ({id, photo, title, date, handleClick, audio, ...props}) =>
         <div className="content" onClick={props.onClick}>
             <div className={'cardInfo'}>
               <div className={'firstPart'}>
+                <div></div>
                   <img alt={'podcsat view'} src={photo} className={'castCover'}/>
                   <div className={'textPart'}>
                       <p className={'title'}>{id}. {title}</p>
                       <div className={'detail'}>
                           <p className={'name'}>Nom Prénom - Youtube </p>
-                          <div className={'dot'}>•</div>
+                          <BsDot className={'dot'}/>
                           <div className={'date'}>{date}</div>
                       </div>
                   </div>
