@@ -1,0 +1,18 @@
+.navigation{
+    width: 100%;
+}
+
+.navigation_wrapper{
+    min-width: 100%;
+    background-color: #e0e0de;
+    height: 5px;
+    border-radius: 30px;
+    cursor: pointer;
+}    
+.seek_bar{
+    width: 0;
+    height: 100%;
+    background-color: #FF462D;
+    border-radius: 30px;
+}
+

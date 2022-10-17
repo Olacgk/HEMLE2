@@ -11,7 +11,7 @@ import {BsChevronDoubleLeft, BsChevronDoubleRight, BsFullscreenExit} from 'react
 
 
 Modal.setAppElement("#root");
-const Fullscreen = ({title, photo, next, previous, isplaying, playPause}) =>{
+const Fullscreen = ({title, photo, next, previous, isplaying, playPause, clickRef, checkWidth, completed}) =>{
 
     const [openModal, setOpenModal] = useState(false);
 
@@ -32,12 +32,12 @@ const Fullscreen = ({title, photo, next, previous, isplaying, playPause}) =>{
                             <p className="fullscreenTitle">{title}</p>
                         </div>
                         <div className="fullscreenPlayer">
-                            <div>5:26 / 8:00</div>
-                            <ProgressBar className="fullscreenProgress" bgcolor={'#FF462D'} completed={75}/>
+                            <div className="fullscreenProgress">5:26 / 8:00</div>
+                            <ProgressBar clickRef={clickRef} checkWidth={checkWidth} completed={completed}/>
                             <div className="fullbuttonPlayer">
                         <div className="fullbutton1">
                             {!isplaying ? <FaPlay onClick={playPause} size={'1.25rem'}/> : <FaPause onClick={playPause} size={'1.25rem'}/>}
-                            <GiSpeaker size={'1.25rem'}/>
+                            {/* <GiSpeaker size={'1.25rem'}/> */}
                             <BiTime size={'1.25rem'}/>
                         </div>
                         <div className="fullbutton2">
