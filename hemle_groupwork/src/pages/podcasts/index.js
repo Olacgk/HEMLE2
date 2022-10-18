@@ -10,7 +10,6 @@ const Podcasts = () => {
   const [open, setOpen] = useState(false)
   const [active, setActive] = useState(playlistContent[0])
   const [isPlaying, setIsPlaying] = useState(false)
-  // const [isplaying, setisplaying] = useState(false);
   const [currentSong, setCurrentSong] = useState(playlistContent[0]);
 
 

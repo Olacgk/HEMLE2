@@ -7,7 +7,7 @@ const ClubBanniere = () => {
         <div className="clubbanniere">
             <div className="darkbanniere">
                 <img className="clublogo" alt="club logo" src={clublogo}/>
-                <h1>Canon Sportif de Yaoundé</h1>
+                <h1 className="clubnameban">Canon Sportif de Yaoundé</h1>
                 <div className="barre"></div>
             </div>
         </div>
