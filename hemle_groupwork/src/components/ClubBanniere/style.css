@@ -1,0 +1,27 @@
+.clubbanniere{
+    background-image: url("../../assets/clubs/yaoundebackground.svg");
+    background-position: 30% 70%;
+    width: 100%;
+    height: 447px;
+}
+
+.darkbanniere{
+    background: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.clublogo{
+    margin-top: 97px;
+}
+h1{
+    margin-top: 40px;
+}
+.barre{
+    margin-top: 16px;
+    background: linear-gradient(90deg, #DF251A 6.4%, #E02D1A 12.32%, #E44419 21.71%, #E96A17 33.39%, #F19D16 46.8%, #F7C914 56.97%, #ECC716 60.02%, #CDC01B 65.45%, #9CB624 72.62%, #58A730 81.26%, #039540 91.05%, #009440 91.32%);
+    width: 72px;
+    height: 6px;
+}

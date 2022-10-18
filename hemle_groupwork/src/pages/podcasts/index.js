@@ -17,7 +17,8 @@ const Podcasts = () => {
   const handleClick = (id)=>{
     setOpen(true)
     setActive(playlistContent[id -1])
-    togglePlayPause()
+    // togglePlayPause()
+    setIsPlaying(true)
   }
 
   const nextPodcast = () =>{
@@ -63,6 +64,7 @@ const Podcasts = () => {
 
   const togglePlayPause = () => {
     setIsPlaying(!isPlaying);
+    setOpen(true)
   }
 
   const clickRef = useRef()
