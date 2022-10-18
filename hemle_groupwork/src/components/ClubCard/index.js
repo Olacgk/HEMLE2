@@ -1,14 +1,16 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import './style.css'
 
-const ClubCard = ({name, blason, division}) =>{
+const ClubCard = ({name, blason, division, link}) =>{
     return(
-        <div className="clubContainer">
-            {/* <div className="blason"></div> */}
-            <img className="blason" src={blason} alt={"cover"} />
-            <p className="nom">{name}</p>
-            <p className="division">{division}</p>
-        </div>
+        <Link to={link}>
+            <div className="clubContainer">
+                <img className="blason" src={blason} alt={"cover"} />
+                <p className="nom">{name}</p>
+                <p className="division">{division}</p>
+            </div>
+        </Link>
     )
 }
 

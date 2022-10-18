@@ -34,7 +34,7 @@
 .developped{
     border-top: 1px solid white;
     border-bottom: 1px solid white;
-    height: 258px;
+    height: auto;
     display: none;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: space-between;
@@ -50,4 +50,28 @@
 .award{
     color: yellow;
     justify-content: center;
+}
+
+@media (max-width: 576px) {
+    .clubdetail{
+        margin: 30px 30px;
+    }
+    .clubname{
+        font-size: 14px;
+    }
+    .blasonclub{
+        width: 40px;
+        height: 40px;
+    }
+    .developped{
+        height: auto;
+        grid-template-columns: repeat(1, auto);
+        grid-gap: 20px;
+        padding: 21px 15px;
+        font-size: 16px;
+        line-height: 16px;
+    }
+    .between{
+        margin: 20px 0
+    }
 }

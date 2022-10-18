@@ -1,13 +1,17 @@
 import React from "react";
 import './style.css'
-import clublogo from "../../assets/clubs/yaoundelogo.svg"
 
-const ClubBanniere = () => {
+const ClubBanniere = ({logo, name, background}) => {
+
+    // let elem = document.getElementsByClassName("clubbanniere")[0]
+    // elem.style.background = 
+    // document.getElementsByClassName("clubbanniere")[0].style.background= background
+
     return (
-        <div className="clubbanniere">
+        <div className="clubbanniere" style={{backgroundImage: `url(${background})`}}>
             <div className="darkbanniere">
-                <img className="clublogo" alt="club logo" src={clublogo}/>
-                <h1 className="clubnameban">Canon Sportif de Yaoundé</h1>
+                <img className="clublogo" alt="club logo" src={logo}/>
+                <h1 className="clubnameban">{name}</h1>
                 <div className="barre"></div>
             </div>
         </div>

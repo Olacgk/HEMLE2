@@ -3,7 +3,6 @@ import './style.css';
 import ClubCard from '../../components/ClubCard';
 import Header from '../../components/Header';
 import { clubLists } from '../../data/clubsLists';
-import { Link } from 'react-router-dom';
 
 
 const clubperpage = 10
@@ -23,9 +22,7 @@ const Clubs = () => {
                 {
                     clubLists.slice(0, next)?.map(club => {
                         return(
-                            <Link to={"/info-club"}>
-                                <ClubCard key={club.id} blason={club.blason} name={club.nom} division={club.division}/>
-                            </Link>
+                            <ClubCard link={`/info-club/${club.id}`} key={club.id} blason={club.blason} name={club.nom} division={club.division}/>
                         )
                     })
                 }
