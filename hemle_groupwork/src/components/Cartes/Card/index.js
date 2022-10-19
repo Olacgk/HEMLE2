@@ -9,9 +9,9 @@ let tmpButton = "Voir fiche du joueur"
 
 const Card = ({player}) => 
 
-    <div className="aside">
+    <div className="aside a_player_card">
         
-        <a href="/otherpage" alt="just a link">
+        <a href={"/infos/"/*+player.number*/} alt="just a link">
             <div className="imgContainer">
             
                 <div className="image">

@@ -1,9 +1,8 @@
 import React from "react";
 
-import {options} from "../About/variables.js"
 import "./style.css"
 
-const Options = () => {
+const Options = ({options}) => {
     let tab = []
     for (let tmp of options) tab.push(
         <aside>

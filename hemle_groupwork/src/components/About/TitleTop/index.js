@@ -1,9 +1,8 @@
 import React from "react";
 
 import "./style.css"
-import {titleTop} from "../About/variables.js"
 
-const TitleTop = () => {
+const TitleTop = ({titleTop}) => {
     return (
         <section id='titleTop'>
             <h1> {titleTop.title} </h1>

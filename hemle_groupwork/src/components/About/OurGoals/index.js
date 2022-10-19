@@ -1,11 +1,11 @@
 import React from "react";
 import BuildTitle from "../Functions"
 
-import goal from "../../assets/home/goals.png"
+import goal from "../../../assets/home/goals.png"
 
 import "./style.css"
 
-const OurGoals = () => {
+const OurGoals = ({ourGoals}) => {
     return (
         <section id="ourGoals">
             

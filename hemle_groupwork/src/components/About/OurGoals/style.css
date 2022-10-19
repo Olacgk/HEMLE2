@@ -37,7 +37,6 @@
     justify-content: center;
     align-items: center;
 
-    border-image-source:url(../../assets/tools/bar.png);
     background: linear-gradient(to right, red, yellow, green);
     padding: 3px;
     border-radius: 100%;

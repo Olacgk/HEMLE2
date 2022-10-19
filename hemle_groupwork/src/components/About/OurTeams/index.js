@@ -1,21 +1,19 @@
 import React from "react";
 import BuildTitle from "../Functions";
 
-import {ourTeams} from "../About/variables.js"
-import "./style.css"
-
 import {FiChevronLeft} from "react-icons/fi"
 import {FiChevronRight} from "react-icons/fi"
 
-import { useState} from 'react'
-
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay} from "swiper";
+
 import "swiper/css";
+import "./style.css"
+import { useState} from 'react'
 
 
-const OurTeams = () => {
 
+const OurTeams = ({ourTeams}) => {
 
 	const [swiper, setSwiper] = useState();
 
@@ -37,7 +35,7 @@ const OurTeams = () => {
 	}
 
 
-    return(
+    return (
         <section id="OurTeams">
             
             { BuildTitle(ourTeams.title) }

@@ -1,11 +1,11 @@
-section {
+.players_position {
     display: flex;
     flex-direction: column;
 
     margin: 2em 2em;
 }
 
-section h2 {
+.players_position h2 {
     text-transform: uppercase;
     font-size: 25px;
     font-weight: bold;
@@ -13,27 +13,27 @@ section h2 {
     color: white;
 }
 
-section .asides {
+.players_position .asides {
     display: flex;
     flex-wrap: wrap;
     overflow: hidden;
 }
 
-section .aside:hover {
+.players_position .aside:hover {
     scale: 1.025;
 }
 
 @media all and (max-width: 560px)
 {
-    section {
+    .players_position {
         margin: 1em 0.25em;
     }
     
-    section h2 {
+    .players_position h2 {
         margin: 0.5em 0.15em;
     }
     
-    section .aside {
+    .players_position .aside {
         background: #292A2A;
         width: 3420px;
         height: 150px;

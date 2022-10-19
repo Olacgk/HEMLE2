@@ -1,4 +1,4 @@
-import bar from "../../assets/tools/bar.png"
+import bar from "../../../assets/tools/bar.png"
 
 const BuildTitle = (title) => {
     return (

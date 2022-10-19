@@ -1,18 +1,20 @@
 import React from "react";
 import BuildTitle from "../Functions";
 
-import camfoot from "../../assets/footer/camfoot.png"
-import onefoot from "../../assets/footer/onefoot.png"
-import sport from "../../assets/footer/sport.png"
-
 import Pc from "./Pc.js"
 import Phone from "./Phone.js"
 
 import "./style.css"
 
-const OurFriends = () => {
+import camfoot from "../../../assets/footer/camfoot.png"
+import onefoot from "../../../assets/footer/onefoot.png"
+import sport from "../../../assets/footer/sport.png"
+
+const OurFriends = ({ourFriends}) => {
+
     let tab = [camfoot, onefoot, sport]
-    return(
+
+    return (
         <section id="OurFriends">
 
             { BuildTitle("Nos partenaires") }
