@@ -19,14 +19,14 @@ const OurFriends = ({ourFriends}) => {
 
             { BuildTitle("Nos partenaires") }
             
-            <div class="content">
-                <div class="article">
+            <div class="ourfriend-content">
+                <div class="ourfriend-article">
                     <p>
                         Nous sommes pret a tout pour vous offrir le meilleur du  football africain avec:
                     </p>
                 </div>
                 
-                <div class="images">
+                <div class="ourfriend-images">
                     { (1) ? <Pc tab={tab}/> : <Phone tab={tab}/> }
                 </div>
             </div>

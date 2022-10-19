@@ -29,7 +29,8 @@
   color: black;
 }
 
-#about_page section .content, section .images {
+#about_page section .content,
+#about_page section .images {
   display: flex;
 }
 

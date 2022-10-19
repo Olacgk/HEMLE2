@@ -40,13 +40,13 @@ const OurTeams = ({ourTeams}) => {
             
             { BuildTitle(ourTeams.title) }
 
-            <div class="content">
+            <div class="ourTeam-content">
                 
-                <div class="article">
+                <div class="ourTeam-article">
                     <p> {ourTeams.article} </p>
                 </div>
                 
-                <div class="images">
+                <div class="ourTeam-images">
                     <div class='slide' id='left' onClick={() => swiper.slidePrev()}>
                         <div class="slidediv">
                             <FiChevronLeft />
