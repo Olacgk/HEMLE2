@@ -1,12 +1,5 @@
 #ourGoals {
-    display: flex;
     flex-direction: column;
-}
-
-#ourGoals .content {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
 }
 
 #ourGoals .title {
@@ -14,14 +7,17 @@
     top: 3em;
 }
 
+#ourGoals .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 
 
 
 #ourGoals .article {
     max-width:30em;
-    font-family: "Roboto";
-    font-weight: 400;
-    font-size: 18px;
     line-height: 25px;
 }
 
@@ -38,14 +34,12 @@
 
 
 #ourGoals .images {
-    border-image-source:url(../../assets/tools/bar.png);
-    padding: 1em;
-    border: 2px solid black;
-    margin: 3em 0;
-    
-    display: flex;
     justify-content: center;
     align-items: center;
+
+    border-image-source:url(../../assets/tools/bar.png);
+    background: linear-gradient(to right, red, yellow, green);
+    padding: 3px;
     border-radius: 100%;
 }
 
@@ -53,11 +47,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 100%;
 
+    background: white;
     width: 30em;
     height: 30em;
+    border-radius: 100%;
     overflow: hidden;
+    border: 15px solid transparent;
 }
 
 #ourGoals .images img {
@@ -77,12 +73,24 @@
     }
     #ourGoals .article {
         max-width: 60em;
-        margin: 0 2em;
+    }
+    #ourGoals .images {
+        margin: 2em 0;
     }
 }
 @media all and (max-width: 40em) {
     #ourGoals .images .img {
         width: 20em;
         height: 20em;
+    }
+}
+@media all and (max-width: 454px) {
+    #ourGoals .images .img {
+        max-width: 17em;
+        height: 17em;
+        border-width: 10px;
+    }
+    #ourGoals .article {
+        font-size: 15px;
     }
 }

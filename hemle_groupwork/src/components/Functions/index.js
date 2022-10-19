@@ -1,9 +1,9 @@
 import bar from "../../assets/tools/bar.png"
 
-const BuildTitle = () => {
+const BuildTitle = (title) => {
     return (
         <div class="title">
-            <h2> Notre objectifs </h2>
+            <h2> {title} </h2>
             <img src={bar} className="bar" alt='multicolor bar'/>
         </div>
     )

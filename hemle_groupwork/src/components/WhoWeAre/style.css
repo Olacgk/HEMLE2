@@ -1,77 +1,47 @@
-
 #WhoWeAre {
     flex-direction: column;
-    padding-top: 4em;
 }
 
 #WhoWeAre .content {
-    display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: flex-end;
 }
-
-#WhoWeAre h2 {
-    text-transform: uppercase;
-    font-weight: 700;
-    font-size: 34px;
-    line-height: 67px;
-    color: black;
-}
-
-
-
-
 
 #WhoWeAre .article {
-    max-width:30em;
-    font-family: "Roboto";
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 25px;
-    /*background: red;*/
+    max-width:32em;
 }
-
-#WhoWeAre .article p {
-    margin:1em 0;
-    color: black;
-}
-
-#WhoWeAre .article a {
-    color: #009741;
-    text-decoration: underline;
-}
-
-
-
 
 #WhoWeAre .images {
-    display:flex;
-    justify-content:space-around;
-    align-items:center;
+    justify-content: center;
+    align-items: center;
+
     min-height: 23em;
+    position: absolute;
+    top: 4em; bottom: 0; right: 4em;
 }
 
 #WhoWeAre .images aside {
-    width: 7em;
-    height: 14em;
+    width: 7.5em;
+    max-height: 14em;
     margin: 0 1.5em;
-    border-radius: 5px 10px;
+    border-radius: 4% 8%;
     transform: skew(-23deg);
     overflow: hidden;
-    padding: 0;
 }
+#WhoWeAre aside:nth-child(2) { scale:1.5; }
 
-#WhoWeAre .images aside:nth-child(2) {
-    scale:1.5;
-}
-
-#WhoWeAre .images img {
+#WhoWeAre aside img {
     transform:skew(23deg);
     margin-left: -2em;
+    transition: 0.5s;
 }
+#WhoWeAre aside:hover img { scale: 1.2; }
 
 
-@media all and (max-width: 80em) {
+@media all and (max-width: 82em) {
+    #WhoWeAre .title {
+        position: relative;
+    }
     #WhoWeAre .content {
         align-items: center;
         flex-direction: column-reverse;
@@ -80,6 +50,32 @@
     }
     #WhoWeAre .article {
         max-width: 50em;
-        margin: 0 1em;
+    }
+    #WhoWeAre .images {
+        position: relative;
+        top: 0; bottom: 0; right: 0;
+    }
+    
+}
+
+@media all and (max-width: 600px) {
+    #WhoWeAre .images {
+        min-height: 16em;
+    }
+    #WhoWeAre .images aside {
+        height: 10em;
+        margin: 0em 1em;
+    }
+}
+
+@media all and (max-width: 500px) {
+    #WhoWeAre .images {
+        min-height: 13em;
+        margin: 25px 0 0px 0;
+    }
+    #WhoWeAre .images aside {
+        width: 4em;
+        height: 8em;
+        margin: 0em 0.75em;
     }
 }

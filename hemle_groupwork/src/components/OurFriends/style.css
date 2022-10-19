@@ -1,6 +1,6 @@
 #OurFriends {
-    display: flex;
     flex-direction: column;
+    padding-bottom: 3em;
 }
 
 #OurFriends .content {
@@ -9,34 +9,28 @@
 
 
 
-#OurFriends .article {
-    width:100%;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 25px;
-}
-
-#OurFriends .article p {
-    margin:1em 0;
-    color: black;
-}
-
-
 #OurFriends .images {
-    border-image-source:url(../../assets/tools/bar.png);
-    height: 10em;
-    overflow-x: hidden;
+    height: 5em;
+    overflow: hidden;
 }
 
 #OurFriends .images .imgs {
-    height: 110%;
-    overflow-x: auto;
-
     display: flex;
     align-items: center;
     flex-wrap: nowrap;
+
+    height: 120%;
+    overflow-x: auto;
+    overflow-y: hidden;
 }
 
 #OurFriends .images img {
     margin: 2em 5em;
+}
+
+
+@media all and (max-width: 454px) {
+    #OurFriends .article p {
+        line-height: 1.75em;
+    }
 }

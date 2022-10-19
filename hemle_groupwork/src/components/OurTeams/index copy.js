@@ -49,15 +49,15 @@ const OurTeams = () => {
                 </div>
                 
                 <div class="images">
-                    <div class='slide' id='left' onClick={() => swiper.slidePrev()}>
+                    <div  onClick={() => swiper.slidePrev()} class='slide' id='left'>
                         <div class="slidediv">
                             <FiChevronLeft />
                         </div>
                     </div>
-                    <Swiper {...settings} initialSlide={0} onSwiper={setSwiper} className="imgs">
+                    <Swiper {...settings} initialSlide={0} onSwiper={setSwiper}>
                         {ourTeams.asides.map( (tmp,index) => (
                             <SwiperSlide key={index}>
-                                <div className="aside">
+                                <div>
                                     <img src={tmp.image} alt={tmp.job}/>
                                     <div>
                                         <h2> {tmp.title} </h2>
@@ -67,7 +67,7 @@ const OurTeams = () => {
                             </SwiperSlide>
                         ))}
                     </Swiper>
-                    <div class='slide' id='right' onClick={() => swiper.slideNext()}>
+                    <div  onClick={() => swiper.slideNext()}class='slide' id='right'>
                         <div class="slidediv">
                             <FiChevronRight />
                         </div>

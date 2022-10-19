@@ -1,15 +1,15 @@
 #Options {
-    display: flex;
+    flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
+    padding: 5em 0;
 }
 
 #Options aside {
     width: 17em;
-    margin: 1.5em 0em;
-    color: black;
+    margin: 2.5em 0em;
     text-align: center;
-    border-right: 2px solid black;
+    border-right: 1px solid #292A2A;
 }
 
 #Options h2 {
@@ -17,8 +17,7 @@
     font-size: 4.5em;
     font-weight: bold;
     line-height: 18.12px;
-    margin: 1em 0;
-    text-transform: none;
+    margin-bottom: 1em;
 }
 
 #Options p {
@@ -36,18 +35,22 @@
     border: 0px;
 }
 
-@media all and (max-width: 1212px and min-width: 930px) {
+@media all and (max-width: 1212px) and (min-width: 930px) {
     #Options aside:nth-child(3) { border-width: 0px; }
 }
 @media all and (max-width: 930px) {
+    #Options { padding: 1.5em 0; }
     #Options aside:nth-child(2) { border-width: 0px; }
 }
 
 @media all and (max-width: 580px) {
+    #Options {
+        padding: 0.8em 0;
+        margin: 0;
+    }
     #Options aside {
         font-size: 5px;
-        width: 45em;
-        height: 40em;
+        width: 50%;
     }
     #Options h2 {
         font-size: 35px;
@@ -56,4 +59,12 @@
         font-size: 16px;
         line-height: 2em;
     }
+}
+
+@media all and (max-width: 608px) {
+    #Options aside { width: 50%; }
+}
+
+@media all and (max-width: 454px) {
+    #Options p { font-size: 13px; line-height: 20px; }
 }

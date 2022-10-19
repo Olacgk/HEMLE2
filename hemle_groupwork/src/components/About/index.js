@@ -1,4 +1,6 @@
 import React from "react";
+import Header from "../Header";
+import TitleTop from "../TitleTop";
 import WhoWeAre from "../WhoWeAre";
 import Options from "../Options";
 import OurGoals from "../OurGoals";
@@ -8,6 +10,8 @@ import OurFriends from "../OurFriends";
 function About() {
   return (
     <React.Fragment>
+        <Header/>
+        <TitleTop/>
         <WhoWeAre/>
         <Options />
         <OurGoals />

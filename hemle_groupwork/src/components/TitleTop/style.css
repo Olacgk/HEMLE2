@@ -1,0 +1,27 @@
+#titleTop {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+    background: #292A2A;
+    padding: 3em 0em 2em 0em;
+}
+
+#titleTop h1 {
+    font-size: 40px;
+    text-transform: uppercase;
+    margin: 0.6em 0;
+    font-weight: 900;
+}
+
+#titleTop p {
+    font-size: 25px;
+    font-style: italic;
+}
+
+@media all and (max-width: 484px) {
+    #titleTop h1 { font-size: 24px; }
+    #titleTop p { font-size: 16px; }
+}

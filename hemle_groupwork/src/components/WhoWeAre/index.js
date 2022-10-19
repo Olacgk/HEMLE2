@@ -3,7 +3,7 @@ import React from "react";
 import img1 from "../../assets/home/person1.png"
 import img2 from "../../assets/home/person2.png"
 import img3 from "../../assets/home/person3.png"
-import bar from "../../assets/tools/bar.png"
+import BuildTitle from "../Functions"
 
 import "./style.css"
 
@@ -11,10 +11,7 @@ const WhoWeAre = () => {
     return(
         <section id="WhoWeAre">
             
-            <div class="title">
-                <h2> Qui sommes-nous ? </h2>
-                <img src={bar} className="bar" alt='multicolor bar'/>
-            </div>
+            { BuildTitle("Qui sommes-nous ?") }
 
             <div class="content">
                 <div class="article">
