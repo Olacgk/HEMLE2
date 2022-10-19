@@ -12,8 +12,8 @@ const WhoWeAre = ({whoWeAre}) => (
     
         { BuildTitle("Qui sommes-nous ?") }
 
-        <div class="content">
-                <div class="article">
+        <div class="whoweare-wrapper">
+                <div class="whoweare-article">
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. <a href='/'> Dignissim blandit
                         </a> arcu nisl erat sit urna. Eget et ut quam malesuada congue. Justo venenatis ac nisi adipiscing
@@ -27,7 +27,7 @@ const WhoWeAre = ({whoWeAre}) => (
                     </p>
                 </div>
                 
-                <div class="images">
+                <div class="whoweare-images">
                     <aside> <img src={img1} alt=''/> </aside>
                     <aside> <img src={img2} alt=''/> </aside>
                     <aside> <img src={img3} alt=''/> </aside>

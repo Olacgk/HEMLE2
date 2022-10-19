@@ -11,9 +11,9 @@ const OurGoals = ({ourGoals}) => {
             
             { BuildTitle("Notre objectifs") }
 
-            <div class="content">
+            <div class="ourGoals-content">
                 
-                <div class="article">
+                <div class="ourGoals-article">
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dignissim blandit
                         arcu nisl erat sit urna. Eget et ut quam malesuada congue. Justo venenatis ac nisi adipiscing
@@ -27,7 +27,7 @@ const OurGoals = ({ourGoals}) => {
                     </p>
                 </div>
                 
-                <div class="images">
+                <div class="ourGoals-images">
                     <div class="img">
                         <img src={goal} alt=''/>
                     </div>

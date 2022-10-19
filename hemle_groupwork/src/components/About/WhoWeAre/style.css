@@ -2,16 +2,19 @@
     flex-direction: column;
 }
 
-#about_page #WhoWeAre .content {
+#about_page #WhoWeAre .whoweare-wrapper {
     justify-content: space-between;
     align-items: flex-end;
 }
 
-#about_page #WhoWeAre .article {
+#about_page #WhoWeAre .whoweare-article {
     max-width:32em;
+    margin-top: 1em;
+    font-size: 18px;
 }
 
-#about_page #WhoWeAre .images {
+#about_page #WhoWeAre .whoweare-images {
+    display: flex;
     justify-content: center;
     align-items: center;
 
@@ -20,7 +23,7 @@
     top: 4em; bottom: 0; right: 4em;
 }
 
-#about_page #WhoWeAre .images aside {
+#about_page #WhoWeAre .whoweare-images aside {
     width: 7.5em;
     max-height: 14em;
     margin: 0 1.5em;
@@ -42,16 +45,21 @@
     #about_page #WhoWeAre .title {
         position: relative;
     }
-    #about_page #WhoWeAre .content {
+    #about_page #WhoWeAre .whoweare-wrapper {
         align-items: center;
         flex-direction: column-reverse;
         max-width: auto;
         width: 100%;
     }
-    #about_page #WhoWeAre .article {
+    #about_page #WhoWeAre .whoweare-article {
         max-width: 50em;
     }
-    #about_page #WhoWeAre .images {
+
+    #about_page #WhoWeAre .whoweare-article p {
+        margin: 1em 0;
+        line-height: 1.5em;
+    }
+    #about_page #WhoWeAre .whoweare-images {
         position: relative;
         top: 0; bottom: 0; right: 0;
     }
@@ -59,21 +67,21 @@
 }
 
 @media all and (max-width: 600px) {
-    #about_page #WhoWeAre .images {
+    #about_page #WhoWeAre .whoweare-images {
         min-height: 16em;
     }
-    #about_page #WhoWeAre .images aside {
+    #about_page #WhoWeAre .whoweare-images aside {
         height: 10em;
         margin: 0em 1em;
     }
 }
 
 @media all and (max-width: 500px) {
-    #about_page #WhoWeAre .images {
+    #about_page #WhoWeAre .whoweare-images {
         min-height: 13em;
         margin: 25px 0 0px 0;
     }
-    #about_page #WhoWeAre .images aside {
+    #about_page #WhoWeAre .whoweare-images aside {
         width: 4em;
         height: 8em;
         margin: 0em 0.75em;

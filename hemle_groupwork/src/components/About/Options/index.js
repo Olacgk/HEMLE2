@@ -5,7 +5,7 @@ import "./style.css"
 const Options = ({options}) => {
     let tab = []
     for (let tmp of options) tab.push(
-        <aside>
+        <aside className="options-aside">
             <h2> {tmp.title} </h2>
             <p> {tmp.description} </p>
         </aside>
