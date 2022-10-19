@@ -1,0 +1,192 @@
+.asides .a_player_card {
+    position: relative;
+    width: 308px;
+    height: 428px;
+    transition: 0.5s;
+    margin: 1em 0.5em;
+}
+
+.a_player_card .imgContainer {
+    display: flex;
+    
+    position: relative;
+    width: 100%;
+    height: calc(100% - 35px);
+    padding: 0; margin: 0;
+}
+
+.a_player_card .image {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    background: #1F1414 0%, #000000C2 76%, #1F1414 100%;
+    border: 1px solid transparent;
+    border-bottom-width: 0px;
+}
+
+.a_player_card button {
+    border-radius: 0;
+    width: 100%;
+    padding: 8px 5px;
+    text-transform: uppercase;
+    background: transparent;
+    border: 1px solid white;
+    color: white;
+    font-size: 13px;
+    font-weight: bold;
+}
+.a_player_card button:hover { cursor: pointer; }
+
+.a_player_card .image img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    top: 0; left: 50%;
+    transform: translateX(-50%);
+}
+
+.a_player_card .image .number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: url("../../../assets/tools/circle.png");
+    background-size: 100% 100%;
+    width: 55px; height: 55px;
+    position: absolute;
+    top: 28px; left: 20px;
+    border-radius: 50%;
+}
+
+.a_player_card .image .number p {
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+
+
+
+
+.a_player_card .informations {
+    display: flex;
+    flex-direction: column;
+
+    position: absolute;
+    bottom: 0;
+    height: 125px;
+    padding: 0 20px;
+    overflow: hidden;
+}
+
+.a_player_card .informations .shortName {
+    padding: 2px 5px;
+    border-radius: 2px;
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+    background: white;
+}
+
+.a_player_card .informations .job {
+    text-transform: uppercase;
+    color: yellow;
+    font-weight: bold;
+    font-size: 10px;
+    margin: 17px 0;
+}
+
+aside .informations .fullName {
+    font-size: 18px;
+    color: white;
+}
+
+@media all and (min-width: 560px) {
+    .aside:hover .image,
+    .aside:hover button {
+        border-color: #FFFF27;
+        transition: 1s;
+    }
+    .aside:hover .fullName {
+        text-decoration: underline;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+@media all and (max-width: 1040px) {
+    .asides .a_player_card {
+        width: 240px;
+        height: 340px;
+        margin: 0.75em 0.25em;
+    }
+    .a_player_card .informations .fullName {
+        font-size: 17px;
+    }
+}
+
+@media all and (max-width: 560px)
+{
+    .asides .a_player_card {
+        background: #292A2A;
+        width: 3420px;
+        height: 150px;
+        margin: 0.3em 0.15em;
+        padding: 1px;
+    }
+    
+    .a_player_card .imgContainer {
+        height: 100%;
+    }
+    
+    .a_player_card .image {
+        border-bottom: 1px solid transparent;
+        min-width: 152px;
+        width: 152px;
+    }
+    .a_player_card .image img {
+        width: 100%;
+        height: auto;
+    }
+    .a_player_card .image .number {
+        top: 10px; left: 12px;
+        width: 35px; height: 35px;
+        font-size: 12px;
+    }
+
+
+    .a_player_card .informations {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        
+        flex: 1;
+        height: auto;
+        padding: 15px 20px;
+        position: relative;
+    }
+    .a_player_card .informations .shortName {
+        padding: 5px;
+    }
+    .a_player_card .informations .job {
+        margin: 10px 0;
+    }
+    .a_player_card .informations .fullName {
+        font-size: 16px;
+        height: auto;
+        padding: auto;
+    }
+
+    .a_player_card button {
+        display: none;
+    }
+}

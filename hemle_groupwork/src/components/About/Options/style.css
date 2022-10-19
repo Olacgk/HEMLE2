@@ -1,0 +1,70 @@
+#about_page #Options {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 5em 0;
+}
+
+#about_page #Options aside {
+    width: 17em;
+    margin: 2.5em 0em;
+    text-align: center;
+    border-right: 1px solid #292A2A;
+}
+
+#about_page #Options h2 {
+    color: #E44419;
+    font-size: 4.5em;
+    font-weight: bold;
+    line-height: 18.12px;
+    margin-bottom: 1em;
+}
+
+#about_page #Options p {
+    margin-top: 2em;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 30px;
+    padding: 0 1em;
+    box-sizing: content-box;
+}
+
+
+
+#about_page #Options aside:nth-child(4) {
+    border: 0px;
+}
+
+@media all and (max-width: 1212px) and (min-width: 930px) {
+    #about_page #Options aside:nth-child(3) { border-width: 0px; }
+}
+@media all and (max-width: 930px) {
+    #about_page #Options { padding: 1.5em 0; }
+    #about_page #Options aside:nth-child(2) { border-width: 0px; }
+}
+
+@media all and (max-width: 580px) {
+    #about_page #Options {
+        padding: 0.8em 0;
+        margin: 0;
+    }
+    #about_page #Options aside {
+        font-size: 5px;
+        width: 50%;
+    }
+    #about_page #Options h2 {
+        font-size: 35px;
+    }
+    #about_page #Options p {
+        font-size: 16px;
+        line-height: 2em;
+    }
+}
+
+@media all and (max-width: 608px) {
+    #about_page #Options aside { width: 50%; }
+}
+
+@media all and (max-width: 454px) {
+    #about_page #Options p { font-size: 13px; line-height: 20px; }
+}

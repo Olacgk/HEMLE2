@@ -1,0 +1,81 @@
+#about_page #WhoWeAre {
+    flex-direction: column;
+}
+
+#about_page #WhoWeAre .content {
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+#about_page #WhoWeAre .article {
+    max-width:32em;
+}
+
+#about_page #WhoWeAre .images {
+    justify-content: center;
+    align-items: center;
+
+    min-height: 23em;
+    position: absolute;
+    top: 4em; bottom: 0; right: 4em;
+}
+
+#about_page #WhoWeAre .images aside {
+    width: 7.5em;
+    max-height: 14em;
+    margin: 0 1.5em;
+    border-radius: 4% 8%;
+    transform: skew(-23deg);
+    overflow: hidden;
+}
+#about_page #WhoWeAre aside:nth-child(2) { scale:1.5; }
+
+#about_page #WhoWeAre aside img {
+    transform:skew(23deg);
+    margin-left: -2em;
+    transition: 0.5s;
+}
+#about_page #WhoWeAre aside:hover img { scale: 1.2; }
+
+
+@media all and (max-width: 82em) {
+    #about_page #WhoWeAre .title {
+        position: relative;
+    }
+    #about_page #WhoWeAre .content {
+        align-items: center;
+        flex-direction: column-reverse;
+        max-width: auto;
+        width: 100%;
+    }
+    #about_page #WhoWeAre .article {
+        max-width: 50em;
+    }
+    #about_page #WhoWeAre .images {
+        position: relative;
+        top: 0; bottom: 0; right: 0;
+    }
+    
+}
+
+@media all and (max-width: 600px) {
+    #about_page #WhoWeAre .images {
+        min-height: 16em;
+    }
+    #about_page #WhoWeAre .images aside {
+        height: 10em;
+        margin: 0em 1em;
+    }
+}
+
+@media all and (max-width: 500px) {
+    #about_page #WhoWeAre .images {
+        min-height: 13em;
+        margin: 25px 0 0px 0;
+    }
+    #about_page #WhoWeAre .images aside {
+        width: 4em;
+        height: 8em;
+        margin: 0em 0.75em;
+    }
+}

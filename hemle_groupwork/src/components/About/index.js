@@ -1,15 +1,26 @@
 import React from "react";
 import Header from "../Header";
-import WhoWeAre from "../WhoWeAre";
 
-function About()
-{
-  return (
-    <div>
-        <Header />
-        <WhoWeAre/>
+import TitleTop from "./TitleTop";
+import WhoWeAre from "./WhoWeAre";
+import Options from "./Options";
+import OurGoals from "./OurGoals";
+import OurTeams from "./OurTeams";
+import OurFriends from "./OurFriends";
+
+import data from "./data"
+import "./style.css"
+
+const About = () => (
+    <div id="about_page">
+        <Header/>
+        <TitleTop titleTop={data.titleTop} />
+        <WhoWeAre whoWeAre={data.whoWeAre} />
+        <Options options={data.options} />
+        <OurGoals ourGoals={data.ourGoals} />
+        <OurTeams ourTeams={data.ourTeams} />
+        <OurFriends ourFriends={data.ourFriends} />
     </div>
-  );
-}
+)
 
 export default About;
