@@ -30,3 +30,22 @@
     white-space: nowrap;
     font-size: 14px;
 }
+
+@media (max-width: 768px) {
+    .clubContainer{
+        width: 149.16px;
+        height: 190.55px;
+        padding: 16px 14px;
+        gap: 8px;
+    }
+    .blason{
+        width: 90px;
+        height: 90px;
+    }
+    .nom{
+        font-size: 14px;
+    }
+    .division{
+        font-size: 10px;
+    }
+}

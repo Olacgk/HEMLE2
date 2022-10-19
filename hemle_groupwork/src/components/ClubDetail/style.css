@@ -52,12 +52,12 @@
     justify-content: center;
 }
 
-@media (max-width: 576px) {
+@media (max-width: 992px) {
     .clubdetail{
         margin: 30px 30px;
     }
     .clubname{
-        font-size: 14px;
+        font-size: 16px;
     }
     .blasonclub{
         width: 40px;
@@ -73,5 +73,8 @@
     }
     .between{
         margin: 20px 0
+    }
+    .developpbutton{
+        size: 1rem;
     }
 }
