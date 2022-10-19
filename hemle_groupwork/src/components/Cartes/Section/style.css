@@ -1,0 +1,43 @@
+.players_position {
+    display: flex;
+    flex-direction: column;
+
+    margin: 2em 2em;
+}
+
+.players_position h2 {
+    text-transform: uppercase;
+    font-size: 25px;
+    font-weight: bold;
+    margin: 0.5em;
+    color: white;
+}
+
+.players_position .asides {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+.players_position .aside:hover {
+    scale: 1.025;
+}
+
+@media all and (max-width: 560px)
+{
+    .players_position {
+        margin: 1em 0.25em;
+    }
+    
+    .players_position h2 {
+        margin: 0.5em 0.15em;
+    }
+    
+    .players_position .aside {
+        background: #292A2A;
+        width: 3420px;
+        height: 150px;
+        margin: 0.3em 0.15em;
+        padding: 1px;
+    }
+}

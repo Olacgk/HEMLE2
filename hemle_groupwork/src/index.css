@@ -6,18 +6,16 @@
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
 }
-body{
+
+body {
   background: #1D1D1B;
-  color: white;
 }
+
 ul {
   list-style-type: none;
 }
+
 a {
   text-decoration: none;
   color: white;
-}
-body {
-  margin: 0;
-  width: 100%;
 }

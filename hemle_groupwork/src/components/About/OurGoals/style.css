@@ -1,0 +1,95 @@
+#about_page #ourGoals {
+    flex-direction: column;
+}
+
+#about_page #ourGoals .title {
+    position: absolute;
+    top: 3em;
+}
+
+#about_page #ourGoals .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+
+#about_page #ourGoals .article {
+    max-width:30em;
+    line-height: 25px;
+}
+
+#about_page #ourGoals .article p {
+    margin:1em 0;
+}
+
+#about_page #ourGoals .article a {
+    color: #009741;
+    text-decoration: underline;
+}
+
+
+
+
+#about_page #ourGoals .images {
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(to right, red, yellow, green);
+    padding: 3px;
+    border-radius: 100%;
+}
+
+#about_page #ourGoals .images .img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: white;
+    width: 30em;
+    height: 30em;
+    border-radius: 100%;
+    overflow: hidden;
+    border: 15px solid transparent;
+}
+
+#about_page #ourGoals .images img {
+    height: 100%;
+}
+
+@media all and (max-width: 70em) {
+    #about_page #ourGoals .content {
+        flex-direction: column-reverse;
+    }
+    #about_page #ourGoals .title {
+        position: relative;
+        top: 0;
+    }
+    #about_page #ourGoals .content {
+        align-items: center;
+    }
+    #about_page #ourGoals .article {
+        max-width: 60em;
+    }
+    #about_page #ourGoals .images {
+        margin: 2em 0;
+    }
+}
+@media all and (max-width: 40em) {
+    #about_page #ourGoals .images .img {
+        width: 20em;
+        height: 20em;
+    }
+}
+@media all and (max-width: 454px) {
+    #about_page #ourGoals .images .img {
+        max-width: 17em;
+        height: 17em;
+        border-width: 10px;
+    }
+    #about_page #ourGoals .article {
+        font-size: 15px;
+    }
+}
