@@ -1,25 +1,25 @@
-#OurTeams {
+#about_page #OurTeams {
     flex-direction: column;
 }
 
-#OurTeams .content {
+#about_page #OurTeams .content {
     flex-direction: column;
 }
 
-#OurTeams .images {
+#about_page #OurTeams .images {
     position: relative;
     justify-content: center;
     max-height: 29em;
 }
 
-#OurTeams .article p {
+#about_page #OurTeams .article p {
     max-width: 35em;
     line-height: 2em;
 }
 
 
 
-#OurTeams .slide {
+#about_page #OurTeams .slide {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -28,7 +28,7 @@
     margin: 1em 0;
     position: absolute;
 }
-#OurTeams .slidediv {
+#about_page #OurTeams .slidediv {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -37,7 +37,7 @@
     padding: 1px;
     border-radius: 100%;
 }
-#OurTeams .slide svg {
+#about_page #OurTeams .slide svg {
     width: 2em;
     height: 2em;
     color: white;
@@ -45,18 +45,18 @@
     background: #292A2A;
     border-radius: 100%;
 }
-#OurTeams .slide#left { left: -5%; }
-#OurTeams .slide#right { right: -5%; }
+#about_page #OurTeams .slide#left { left: -5%; }
+#about_page #OurTeams .slide#right { right: -5%; }
 
 
-#OurTeams .images .imgs {
+#about_page #OurTeams .images .imgs {
     display: flex;
     justify-content: space-around;
 }
 
 
 
-#OurTeams .imgs .aside {
+#about_page #OurTeams .imgs .aside {
     display: flex;
     flex-direction: column;
 
@@ -64,20 +64,20 @@
     margin: 1em 1.5em;
 }
 
-#OurTeams .aside img {
+#about_page #OurTeams .aside img {
     width: 100%;
     height: 347px;
     border-radius: 10px;
 }
 
-#OurTeams .aside h2 {
+#about_page #OurTeams .aside h2 {
     margin: 20px 0;
     font-size: 15px;
     font-weight: bold;
     color: black;
 }
 @media all and (max-width: 454px) {
-    #OurTeams .article p {
+    #about_page #OurTeams .article p {
         line-height: 1.75em;
     }
 }

@@ -1,12 +1,4 @@
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  
-  background: black;
-}
-
-#root {
+#about_page {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -19,7 +11,7 @@ body {
   color: black;
 }
 
-section {
+#about_page section {
   display: flex;
   background: #EAECE9;
   position: relative;
@@ -29,7 +21,7 @@ section {
   margin: 0;
 }
 
-section .title h2 {
+#about_page section .title h2 {
   text-transform: uppercase;
   font-weight: bold;
   font-size: 34px;
@@ -37,44 +29,44 @@ section .title h2 {
   color: black;
 }
 
-section .content, section .images {
+#about_page section .content, section .images {
   display: flex;
 }
 
-section .article {
+#about_page section .article {
   margin-top: 1em;
   font-size: 18px;
 }
 
-section .article p {
+#about_page section .article p {
   margin: 1em 0;
   line-height: 1.5em;
 }
 
-section .article a {
+#about_page section .article a {
   color: #009741;
   text-decoration: underline;
 }
 
 @media all and (max-width: 50em) {
-  .content {
+  #about_page .content {
     justify-content: center;
   }
 }
 
 @media all and (max-width: 600px) {
-  section {
+  #about_page section {
     width: 96%;
     padding-top: 1em;
   }
-  section .title h2 {
+  #about_page section .title h2 {
     font-size: 1.3em;
     line-height: 37px;
   }
-  section .title img {
+  #about_page section .title img {
     width: 60px;
   }
-  section .article {
+  #about_page section .article {
     font-family: "Roboto";
     font-weight: 400;
     font-size: 15.75px;
@@ -84,11 +76,11 @@ section .article a {
 }
 
 @media all and (max-width: 360px) {
-  section .title h2 {
-    font-size: 1.25em;
-    margin-bottom: -0.5em;
-  }
   #root {
     padding-bottom: 1em;
+  }
+  #about_page section .title h2 {
+    font-size: 1.25em;
+    margin-bottom: -0.5em;
   }
 }

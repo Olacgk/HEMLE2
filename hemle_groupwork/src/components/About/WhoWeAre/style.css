@@ -1,17 +1,17 @@
-#WhoWeAre {
+#about_page #WhoWeAre {
     flex-direction: column;
 }
 
-#WhoWeAre .content {
+#about_page #WhoWeAre .content {
     justify-content: space-between;
     align-items: flex-end;
 }
 
-#WhoWeAre .article {
+#about_page #WhoWeAre .article {
     max-width:32em;
 }
 
-#WhoWeAre .images {
+#about_page #WhoWeAre .images {
     justify-content: center;
     align-items: center;
 
@@ -20,7 +20,7 @@
     top: 4em; bottom: 0; right: 4em;
 }
 
-#WhoWeAre .images aside {
+#about_page #WhoWeAre .images aside {
     width: 7.5em;
     max-height: 14em;
     margin: 0 1.5em;
@@ -28,30 +28,30 @@
     transform: skew(-23deg);
     overflow: hidden;
 }
-#WhoWeAre aside:nth-child(2) { scale:1.5; }
+#about_page #WhoWeAre aside:nth-child(2) { scale:1.5; }
 
-#WhoWeAre aside img {
+#about_page #WhoWeAre aside img {
     transform:skew(23deg);
     margin-left: -2em;
     transition: 0.5s;
 }
-#WhoWeAre aside:hover img { scale: 1.2; }
+#about_page #WhoWeAre aside:hover img { scale: 1.2; }
 
 
 @media all and (max-width: 82em) {
-    #WhoWeAre .title {
+    #about_page #WhoWeAre .title {
         position: relative;
     }
-    #WhoWeAre .content {
+    #about_page #WhoWeAre .content {
         align-items: center;
         flex-direction: column-reverse;
         max-width: auto;
         width: 100%;
     }
-    #WhoWeAre .article {
+    #about_page #WhoWeAre .article {
         max-width: 50em;
     }
-    #WhoWeAre .images {
+    #about_page #WhoWeAre .images {
         position: relative;
         top: 0; bottom: 0; right: 0;
     }
@@ -59,21 +59,21 @@
 }
 
 @media all and (max-width: 600px) {
-    #WhoWeAre .images {
+    #about_page #WhoWeAre .images {
         min-height: 16em;
     }
-    #WhoWeAre .images aside {
+    #about_page #WhoWeAre .images aside {
         height: 10em;
         margin: 0em 1em;
     }
 }
 
 @media all and (max-width: 500px) {
-    #WhoWeAre .images {
+    #about_page #WhoWeAre .images {
         min-height: 13em;
         margin: 25px 0 0px 0;
     }
-    #WhoWeAre .images aside {
+    #about_page #WhoWeAre .images aside {
         width: 4em;
         height: 8em;
         margin: 0em 0.75em;

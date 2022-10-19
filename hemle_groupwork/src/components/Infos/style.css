@@ -1,13 +1,3 @@
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-    background: #272724;
-    color: white;
-}
-
-
 #biographie {
     display: flex;
     flex-direction: column;
@@ -15,6 +5,7 @@ body {
 
     max-width: 50em;
     padding: 0 1em;
+    color: white;
 }
 
 
@@ -61,7 +52,7 @@ body {
     justify-content: center;
     align-items: center;
 
-    background: url("./assets/circle.png");
+    background: url("../../assets/tools/circle.png");
     background-size: 100% 100%;
     width: 55px; height: 55px;
     border-radius: 50%;
@@ -174,7 +165,7 @@ body {
 
 
 
-#biographie @media all and (max-width: 890px) {
+@media all and (max-width: 890px) {
     #biographie #infoSection .image {
         width: 100%;
         margin-right: 0;

@@ -1,5 +1,5 @@
-import theDrap from "./assets/teamLogo.png"
-import playerImage from "./assets/player.png"
+import theDrap from "../../assets/tools/teamLogo.png"
+import playerImage from "../../assets/tools/player.png"
 
 const data = {
     number: 1,

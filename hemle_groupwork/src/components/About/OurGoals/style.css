@@ -1,13 +1,13 @@
-#ourGoals {
+#about_page #ourGoals {
     flex-direction: column;
 }
 
-#ourGoals .title {
+#about_page #ourGoals .title {
     position: absolute;
     top: 3em;
 }
 
-#ourGoals .content {
+#about_page #ourGoals .content {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -16,16 +16,16 @@
 
 
 
-#ourGoals .article {
+#about_page #ourGoals .article {
     max-width:30em;
     line-height: 25px;
 }
 
-#ourGoals .article p {
+#about_page #ourGoals .article p {
     margin:1em 0;
 }
 
-#ourGoals .article a {
+#about_page #ourGoals .article a {
     color: #009741;
     text-decoration: underline;
 }
@@ -33,7 +33,7 @@
 
 
 
-#ourGoals .images {
+#about_page #ourGoals .images {
     justify-content: center;
     align-items: center;
 
@@ -42,7 +42,7 @@
     border-radius: 100%;
 }
 
-#ourGoals .images .img {
+#about_page #ourGoals .images .img {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -55,41 +55,41 @@
     border: 15px solid transparent;
 }
 
-#ourGoals .images img {
+#about_page #ourGoals .images img {
     height: 100%;
 }
 
 @media all and (max-width: 70em) {
-    #ourGoals .content {
+    #about_page #ourGoals .content {
         flex-direction: column-reverse;
     }
-    #ourGoals .title {
+    #about_page #ourGoals .title {
         position: relative;
         top: 0;
     }
-    #ourGoals .content {
+    #about_page #ourGoals .content {
         align-items: center;
     }
-    #ourGoals .article {
+    #about_page #ourGoals .article {
         max-width: 60em;
     }
-    #ourGoals .images {
+    #about_page #ourGoals .images {
         margin: 2em 0;
     }
 }
 @media all and (max-width: 40em) {
-    #ourGoals .images .img {
+    #about_page #ourGoals .images .img {
         width: 20em;
         height: 20em;
     }
 }
 @media all and (max-width: 454px) {
-    #ourGoals .images .img {
+    #about_page #ourGoals .images .img {
         max-width: 17em;
         height: 17em;
         border-width: 10px;
     }
-    #ourGoals .article {
+    #about_page #ourGoals .article {
         font-size: 15px;
     }
 }

@@ -1,20 +1,20 @@
-#OurFriends {
+#about_page #OurFriends {
     flex-direction: column;
     padding-bottom: 3em;
 }
 
-#OurFriends .content {
+#about_page #OurFriends .content {
     flex-direction: column;
 }
 
 
 
-#OurFriends .images {
+#about_page #OurFriends .images {
     height: 5em;
     overflow: hidden;
 }
 
-#OurFriends .images .imgs {
+#about_page #OurFriends .images .imgs {
     display: flex;
     align-items: center;
     flex-wrap: nowrap;
@@ -24,13 +24,13 @@
     overflow-y: hidden;
 }
 
-#OurFriends .images img {
+#about_page #OurFriends .images img {
     margin: 2em 5em;
 }
 
 
 @media all and (max-width: 454px) {
-    #OurFriends .article p {
+    #about_page #OurFriends .article p {
         line-height: 1.75em;
     }
 }

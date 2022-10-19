@@ -7,11 +7,11 @@ import "./style.css"
 
 let tmpButton = "Voir fiche du joueur"
 
-const Card = ({player}) => 
+const Card = ({player, index}) => 
 
     <div className="aside a_player_card">
         
-        <a href={"/infos/"/*+player.number*/} alt="just a link">
+        <a href={"/infos/" + index} alt="just a link">
             <div className="imgContainer">
             
                 <div className="image">
