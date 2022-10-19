@@ -1,8 +1,0 @@
-#WhoWeAre {
-    display: flex;
-    justify-content: space-between;
-}
-
-#WhoWeAre .article {
-    width:30em;
-}

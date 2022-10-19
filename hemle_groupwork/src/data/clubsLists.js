@@ -4,7 +4,7 @@ import sodecoton from "../assets/clubs/sodecoton.svg"
 import yanggoufcb from "../assets/clubs/yangoufcb.png"
 import cluback from "../assets/clubs/yaoundebackground.svg"
 import clublogo from "../assets/clubs/yaoundelogo.svg"
-import cluback1 from "../assets/methode_agile.svg"
+import cluback1 from "../assets/methode_agile.png"
  
 export const clubLists = [
     {
