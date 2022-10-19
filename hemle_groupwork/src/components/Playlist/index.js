@@ -11,8 +11,6 @@ const Playlist = ({handleClick}) => {
     const [next, setNext] = useState(podcastsPerPage);
     const handleMoreImage = () => {
         setNext(next + podcastsPerPage);
-        // let elem = document.getElementsByClassName("boutoncenter")[0]
-        // elem.style.display = 'none'
     };
 
 

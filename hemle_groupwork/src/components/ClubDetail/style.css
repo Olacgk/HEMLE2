@@ -1,0 +1,80 @@
+.clubdetail{
+    margin: 30px 60px;
+    justify-content: center;
+    background: #292A2A;
+}
+
+.nodevelopp{
+    height: 104px;
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    padding: 20px 30px;
+}
+
+.basicinfo{
+    display: flex;
+    align-items: center;
+}
+.blasonclub{
+    width: 67.04px;
+    height: 67.04px;
+}
+.clubname{
+    margin: 0 20px;
+}
+
+.developpbutton{
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: white;
+}
+
+.developped{
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    height: auto;
+    display: none;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: space-between;
+    padding: 42px 30px;
+    font-size: 24px;
+    line-height: 32px;
+}
+
+.between{
+    margin: 40px 0
+}
+
+.award{
+    color: yellow;
+    justify-content: center;
+}
+
+@media (max-width: 992px) {
+    .clubdetail{
+        margin: 30px 30px;
+    }
+    .clubname{
+        font-size: 16px;
+    }
+    .blasonclub{
+        width: 40px;
+        height: 40px;
+    }
+    .developped{
+        height: auto;
+        grid-template-columns: repeat(1, auto);
+        grid-gap: 20px;
+        padding: 21px 15px;
+        font-size: 16px;
+        line-height: 16px;
+    }
+    .between{
+        margin: 20px 0
+    }
+    .developpbutton{
+        size: 1rem;
+    }
+}

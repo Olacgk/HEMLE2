@@ -22,7 +22,7 @@ const Clubs = () => {
                 {
                     clubLists.slice(0, next)?.map(club => {
                         return(
-                            <ClubCard key={club.id} blason={club.blason} name={club.nom} division={club.division}/>
+                            <ClubCard link={`/info-club/${club.id}`} key={club.id} blason={club.blason} name={club.nom} division={club.division}/>
                         )
                     })
                 }
