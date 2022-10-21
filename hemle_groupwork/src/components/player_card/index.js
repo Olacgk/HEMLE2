@@ -1,23 +1,30 @@
 /*
-    parameter player is an object, which contain image, number and others informations about player
+    page which contains all players in a team
+    
+    parameter player is an object, which contain image,
+    number and others informations about a player
+
+
 */
 
 import React from "react";
 import "./style.css"
 
-let tmpButton = "Voir fiche du joueur"
+let showMoreButton = "Voir fiche du joueur"
 
 const Card = ({player}) => 
 
     <div className="aside a_player_card">
         
-        <a href={"/infos/" + player.id} alt="just a link">
+        <a href={"/profil/" + player.id} alt="link to player profil">
             <div className="imgContainer">
             
                 <div className="image">
                     <img src={player.picture} alt=""/>
+
+                    <div className="imageGradient"></div>
                     
-                    <div className="number">
+                    <div className="number imageGradient">
                         <p> {player.number} </p>
                     </div>
                 </div>
@@ -33,10 +40,8 @@ const Card = ({player}) =>
                 </div>
             
             </div>
-        </a>
-
-        <a href="/otherpage" alt="just a link">
-            <button> {tmpButton} </button>
+            
+            <button> {showMoreButton} </button>
         </a>
     
     </div>
