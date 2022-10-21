@@ -1,5 +1,7 @@
-/**
+/*
     variable section contains all players at a stade position
+
+    Card is the component of a player card
 */
 
 import Card from "../player_card"
