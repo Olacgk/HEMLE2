@@ -1,0 +1,38 @@
+#about_page #OurFriends {
+    flex-direction: column;
+    padding-bottom: 3em;
+}
+
+#about_page a  {
+    color: green;
+}
+
+#about_page #OurFriends .ourfriend-content {
+    flex-direction: column;
+}
+
+
+
+#about_page #OurFriends .ourfriend-images {
+    height: 10em;
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+}
+
+#about_page #OurFriends .ourfriend-images .imgs {
+    display: flex;
+    align-items: center;
+}
+
+#about_page #OurFriends .ourfriend-images img {
+    padding: 2em 50em;
+}
+
+
+@media all and (max-width: 454px) {
+    #about_page #OurFriends .ourfriend-article p {
+        line-height: 1.75em;
+    }
+}

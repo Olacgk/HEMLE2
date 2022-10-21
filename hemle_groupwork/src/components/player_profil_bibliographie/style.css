@@ -1,0 +1,34 @@
+.playerBiographie {
+    padding: 1.5em 0;
+    width: 100%;
+    max-width: 50em;
+}
+
+.playerBiographie h2 {
+    display: flex;
+    align-items: center;
+
+    text-transform: uppercase;
+    font-size: 15px;
+}
+
+.playerBiographie h2::after {
+    content: '';
+    display: block;
+    width: 12px;
+    height: 2px;
+    margin-left: 5px;
+
+    background: linear-gradient(90deg, #DF251A 6.4%, #E02D1A 12.32%, #E44419 21.71%,
+    #E96A17 33.39%, #F19D16 46.8%, #F7C914 56.97%, #ECC716 60.02%, #CDC01B 65.45%,
+    #9CB624 72.62%, #58A730 81.26%, #039540 91.05%, #009440 91.32%);
+}
+
+
+.playerBiographie p {
+    font-size: 15px;
+    line-height: 20px;
+    box-sizing: border-box;
+    padding: 20px 1em;
+    padding-bottom: 0;
+}

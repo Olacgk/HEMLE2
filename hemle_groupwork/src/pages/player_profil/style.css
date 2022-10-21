@@ -1,0 +1,10 @@
+.player-infoSections {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 100vh;
+    padding: 0 1em;
+    color: white;
+}
