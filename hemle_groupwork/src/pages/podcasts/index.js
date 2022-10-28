@@ -4,6 +4,7 @@ import Playerbottom from "../../components/PlayerBottom";
 import Playlist from "../../components/Playlist";
 import PodcastDesc from "../../components/PodcastDesc";
 import { playlistContent } from "../../data/playlistContent";
+import './style.css'
 
 const Podcasts = () => {
 
@@ -81,7 +82,7 @@ const Podcasts = () => {
 
   const onPlaying = () => {
     const duration = audioPlayer.current.duration;
-    const ct = audioPlayer.current.currentTime;
+    const ct = audioPlayer.current.value;
 
     setCurrentSong({ ...currentSong, "progress": ct / duration * 100, "length": duration })
 
@@ -96,16 +97,18 @@ const Podcasts = () => {
     clickRef.current.value = Number(clickRef.current.value + 10);
     onPlaying();
   }
+
+
   
 
   return(
-      <>
+      <div className="global">
         <Header />
-        <audio src={active.audio} ref={audioPlayer} onTimeUpdate={onPlaying}/> 
+        <audio autoPlay src={active.audio} ref={audioPlayer} onTimeUpdate={onPlaying} onEnded={nextPodcast}/> 
         <PodcastDesc completed={currentSong.progress} checkWidth={checkWidth} clickRef={clickRef} playPause={togglePlayPause} isplaying={isPlaying} previous={previousPodcast} next={nextPodcast} id={active.id} photo={active.photo} date={active.date} title={active.title} />
         <Playlist handleClick={handleClick}/>
-        {open ? <Playerbottom backToTen={backTen} goToTen={forwardTen} completed={currentSong.progress} checkWidth={checkWidth} clickRef={clickRef} isPlaying={isPlaying} playPause={togglePlayPause} onClick={()=> setOpen(!open)} id={active.id} photo={active.photo} title={active.title} next={nextPodcast} previous={previousPodcast}/> : <></>}
-      </>
+        {open ? <Playerbottom nowTime={audioPlayer.current.length} time={audioPlayer.current.duration} backToTen={backTen} goToTen={forwardTen} completed={currentSong.progress} checkWidth={checkWidth} clickRef={clickRef} isPlaying={isPlaying} playPause={togglePlayPause} onClick={()=> setOpen(!open)} id={active.id} photo={active.photo} title={active.title} next={nextPodcast} previous={previousPodcast}/> : <></>}
+      </div>
   )
 }
 

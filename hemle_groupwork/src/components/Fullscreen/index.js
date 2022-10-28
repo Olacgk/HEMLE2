@@ -6,14 +6,21 @@ import {BiArrowBack, BiTime} from 'react-icons/bi'
 import {MdShare, MdOpenInFull} from 'react-icons/md'
 import ProgressBar from "../ProgressBar";
 import {FaPause, FaPlay} from 'react-icons/fa';
-import {GiSpeaker} from 'react-icons/gi';
 import {BsChevronDoubleLeft, BsChevronDoubleRight, BsFullscreenExit} from 'react-icons/bs'
 
 
 Modal.setAppElement("#root");
-const Fullscreen = ({title, photo, next, previous, isplaying, playPause, clickRef, checkWidth, completed}) =>{
+const Fullscreen = ({title, photo, next, previous, isplaying, playPause, clickRef, checkWidth, completed, time, nowTime}) =>{
 
     const [openModal, setOpenModal] = useState(false);
+
+    const calculateTime = (secs) => {
+        const minutes = Math.floor(secs / 60);
+        const returnedMinutes = minutes < 10 ? `0${minutes}` : `${minutes}`;
+        const seconds = Math.floor(secs % 60);
+        const returnedSeconds = seconds < 10 ? `0${seconds}` : `${seconds}`;
+        return `${returnedMinutes}:${returnedSeconds}`;
+      }
 
 
     return(
@@ -32,8 +39,8 @@ const Fullscreen = ({title, photo, next, previous, isplaying, playPause, clickRe
                             <p className="fullscreenTitle">{title}</p>
                         </div>
                         <div className="fullscreenPlayer">
-                            <div className="fullscreenProgress">5:26 / 8:00</div>
-                            <ProgressBar clickRef={clickRef} checkWidth={checkWidth} completed={completed}/>
+                            <div className="fullscreenProgress">{calculateTime(nowTime)}/{calculateTime(time)}</div>
+                            <ProgressBar checkWidth={checkWidth} completed={completed} clickRef={clickRef}/>
                             <div className="fullbuttonPlayer">
                         <div className="fullbutton1">
                             {!isplaying ? <FaPlay onClick={playPause} size={'1.25rem'}/> : <FaPause onClick={playPause} size={'1.25rem'}/>}

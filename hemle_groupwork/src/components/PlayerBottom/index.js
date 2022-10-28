@@ -6,10 +6,11 @@ import {IoMdCloseCircle} from "react-icons/io";
 import ProgressBar from "../ProgressBar"
 import './style.css'
 import Fullscreen from '../Fullscreen';
+// import AudioPlayer from 'react-h5-audio-player';
 
 
 
-const Playerbottom = ({photo, title, id, playPause, isPlaying, next, previous, completed, clickRef, checkWidth, backToTen, goToTen, ...props}) => {
+const Playerbottom = ({time, nowTime, photo, title, id, playPause, isPlaying, next, previous, completed, clickRef, checkWidth, backToTen, goToTen, ...props}) => {
 
 
   return(
@@ -29,12 +30,15 @@ const Playerbottom = ({photo, title, id, playPause, isPlaying, next, previous, c
                   {!isPlaying ? <MdPlayArrow onClick={playPause} size={'2rem'} className={'buttonbottom'}/> : <FaPause onClick={playPause} size={'2rem'} className={'buttonbottom'}/>}
                   <MdOutlineForward10 onClick={goToTen} size={'2rem'} className={'buttonbottom buttonbottom2'}/>
                   {/* <MdOpenInFull onClick={() => <Fullscreen/>} size={'2rem'}/> */}
-                  <Fullscreen checkWidth={checkWidth} clickRef={clickRef} isplaying={isPlaying} playPause={playPause} photo={photo} title={title} next={next} previous={previous} className={"buttonbottom2"}/>
+                  <Fullscreen nowTime={nowTime} time={time} completed={completed} checkWidth={checkWidth} clickRef={clickRef} isplaying={isPlaying} playPause={playPause} photo={photo} title={title} next={next} previous={previous} className={"buttonbottom2"}/>
                   <IoMdCloseCircle size={'2rem'} onClick={props.onClick} className={'buttonbottom'}/>
               </div>
           </div>
 
       </div>
+    // <div>
+    //     <AudioPlayer className='playerbottom' autoPlay src={active} showSkipControls={true} onClickNext={next} onClickPrevious={previous}/>
+    // </div>
   )
 }
 
