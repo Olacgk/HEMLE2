@@ -76,26 +76,26 @@ const Podcasts = () => {
     const offset = e.nativeEvent.offsetX;
 
     const divprogress = offset / width * 100;
-    audioPlayer.current.currentTime = divprogress / 100 * active.audio.length;
+    audioPlayer.current.currentTime = divprogress / 100 * audioPlayer.current.duration;
+    setCurrentSong({ ...currentSong, "progress": audioPlayer.current.currentTime})
 
   }
-
   const onPlaying = () => {
     const duration = audioPlayer.current.duration;
-    const ct = audioPlayer.current.value;
+    const ct = audioPlayer.current.currentTime;
 
     setCurrentSong({ ...currentSong, "progress": ct / duration * 100, "length": duration })
 
   }
 
   const backTen = () => {
-    clickRef.current.value = Number(clickRef.current.value - 10);
-    setCurrentSong(clickRef.current.currentTime -10);
+    audioPlayer.current.currentTime = Number( audioPlayer.current.currentTime - 10);
+    setCurrentSong( audioPlayer.current.currentTime );
   }
 
   const forwardTen = () => {
-    clickRef.current.value = Number(clickRef.current.value + 10);
-    onPlaying();
+    audioPlayer.current.currentTime = Number( audioPlayer.current.currentTime + 10);
+    setCurrentSong( audioPlayer.current.currentTime );
   }
 
 
@@ -107,7 +107,7 @@ const Podcasts = () => {
         <audio autoPlay src={active.audio} ref={audioPlayer} onTimeUpdate={onPlaying} onEnded={nextPodcast}/> 
         <PodcastDesc completed={currentSong.progress} checkWidth={checkWidth} clickRef={clickRef} playPause={togglePlayPause} isplaying={isPlaying} previous={previousPodcast} next={nextPodcast} id={active.id} photo={active.photo} date={active.date} title={active.title} />
         <Playlist handleClick={handleClick}/>
-        {open ? <Playerbottom nowTime={audioPlayer.current.length} time={audioPlayer.current.duration} backToTen={backTen} goToTen={forwardTen} completed={currentSong.progress} checkWidth={checkWidth} clickRef={clickRef} isPlaying={isPlaying} playPause={togglePlayPause} onClick={()=> setOpen(!open)} id={active.id} photo={active.photo} title={active.title} next={nextPodcast} previous={previousPodcast}/> : <></>}
+        {open ? <Playerbottom nowTime={audioPlayer.current.currentTime} time={audioPlayer.current.duration} backToTen={backTen} goToTen={forwardTen} completed={currentSong.progress} checkWidth={checkWidth} clickRef={clickRef} isPlaying={isPlaying} playPause={togglePlayPause} onClick={()=> setOpen(!open)} id={active.id} photo={active.photo} title={active.title} next={nextPodcast} previous={previousPodcast}/> : <></>}
       </div>
   )
 }
