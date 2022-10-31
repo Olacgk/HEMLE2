@@ -8,7 +8,7 @@ import Fullscreen from "../Fullscreen";
 import { FaPause } from "react-icons/fa";
 
 Modal.setAppElement("#root");
-const PodcastDesc = ({id, title, photo, date, next, previous, isplaying, playPause, checkWidth, clickRef, completed}) => {
+const PodcastDesc = ({nowTime, time, muted, isMuted, id, title, photo, date, next, previous, isplaying, playPause, checkWidth, clickRef, completed}) => {
 
     return(
         <div className="description">
@@ -35,7 +35,7 @@ const PodcastDesc = ({id, title, photo, date, next, previous, isplaying, playPau
                     <FaPause size={'1rem'}/>
                 </button>}
                     <div className={'action'}>
-                        <Fullscreen completed={completed} checkWidth={checkWidth} clickRef={clickRef} isplaying={isplaying} playPause={playPause} photo={photo} title={title} next={next} previous={previous}/>
+                        <Fullscreen nowTime={nowTime} time={time} isMuted={isMuted} muted={muted} completed={completed} checkWidth={checkWidth} clickRef={clickRef} isplaying={isplaying} playPause={playPause} photo={photo} title={title} next={next} previous={previous}/>
                         <AiOutlineClockCircle className="action2"/>
                         <MdOutlineShare className="action3"/>
                     </div>

@@ -27,6 +27,7 @@
 }
 .sectionBouton{
     margin: 0 60px;
+    padding-top: 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -54,10 +55,12 @@
 }
 .fullbutton1{
     cursor: pointer;
-    display: grid;
+    /* display: grid;
     grid-template-columns: repeat(3, auto);
-    grid-gap: 20px;
-    font-size: 25px;
+    grid-gap: 20px; */
+    display: flex;
+    text-align: center;
+    gap: 20px;
 }
 .fullbutton2{
     display: grid;
@@ -78,4 +81,31 @@
 }
 .exit{
     cursor: pointer;
+}
+
+@media (max-width: 592px) {
+    .sectionBouton{
+        margin: 0 20px;
+    }
+    .fullscreenCover{
+        margin: 30px 0;
+        width: 100px;
+        height: 100px;
+    }
+    .fullscreenTitle{
+        margin: 30px 0;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 26px;
+    }
+    .fullbuttonPlayer{
+        justify-content: space-between;
+        margin: 0 10px;
+    }
+    .toHide{
+        display: none;
+    }
+    .fullscreenPlayer{
+        bottom: 10px;
+    }
 }
