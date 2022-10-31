@@ -9,44 +9,42 @@ import './style.css'
 const Podcasts = () => {
 
   const [open, setOpen] = useState(false)
-  const [active, setActive] = useState(playlistContent[0])
   const [isPlaying, setIsPlaying] = useState(false)
   const [currentSong, setCurrentSong] = useState(playlistContent[0]);
+  const [isMuted, setIsMuted] = useState(false)
 
+  const muted = () =>{
+    setIsMuted(!isMuted)
+  }
 
   const handleClick = (id)=>{
     setOpen(true)
-    setActive(playlistContent[id -1])
-    // togglePlayPause()
+    setCurrentSong(playlistContent[id -1])
     setIsPlaying(true)
   }
 
   const nextPodcast = () =>{
-    // setActive(playlistContent[active.id] )
-    const index = playlistContent.findIndex(x=>x.title === active.title);
+    const index = playlistContent.findIndex(x=>x.title === currentSong.title);
 
     if (index === playlistContent.length-1)
     {
-      setActive(playlistContent[0])
+      setCurrentSong(playlistContent[0])
     }
     else
     {
-      setActive(playlistContent[index + 1])
+      setCurrentSong(playlistContent[index + 1])
     }
     audioPlayer.current.currentTime = 0;
   }
   const previousPodcast = () => {
-    // if (active.id > 1){
-    //   setActive(playlistContent[active.id -2] )
-    // }
-    const index = playlistContent.findIndex(x=>x.title === active.title);
+    const index = playlistContent.findIndex(x=>x.title === currentSong.title);
     if (index === 0)
     {
-      setActive(playlistContent[playlistContent.length - 1])
+      setCurrentSong(playlistContent[playlistContent.length - 1])
     }
     else
     {
-      setActive(playlistContent[index - 1])
+      setCurrentSong(playlistContent[index - 1])
     }
     audioPlayer.current.currentTime = 0;
   }
@@ -70,8 +68,7 @@ const Podcasts = () => {
   const clickRef = useRef()
 
 
-  const checkWidth = (e)=>
-  {
+  const checkWidth = (e)=>{
     let width = clickRef.current.clientWidth;
     const offset = e.nativeEvent.offsetX;
 
@@ -80,6 +77,7 @@ const Podcasts = () => {
     setCurrentSong({ ...currentSong, "progress": audioPlayer.current.currentTime})
 
   }
+
   const onPlaying = () => {
     const duration = audioPlayer.current.duration;
     const ct = audioPlayer.current.currentTime;
@@ -98,16 +96,15 @@ const Podcasts = () => {
     setCurrentSong( audioPlayer.current.currentTime );
   }
 
-
   
 
   return(
       <div className="global">
         <Header />
-        <audio autoPlay src={active.audio} ref={audioPlayer} onTimeUpdate={onPlaying} onEnded={nextPodcast}/> 
-        <PodcastDesc completed={currentSong.progress} checkWidth={checkWidth} clickRef={clickRef} playPause={togglePlayPause} isplaying={isPlaying} previous={previousPodcast} next={nextPodcast} id={active.id} photo={active.photo} date={active.date} title={active.title} />
+        <audio muted={isMuted} autoPlay src={currentSong.audio} ref={audioPlayer} onTimeUpdate={onPlaying} onEnded={nextPodcast}/> 
+        <PodcastDesc isMuted={isMuted} muted={muted} nowTime={currentSong.progress} time={currentSong.length} completed={currentSong.progress} checkWidth={checkWidth} clickRef={clickRef} playPause={togglePlayPause} isplaying={isPlaying} previous={previousPodcast} next={nextPodcast} id={currentSong.id} photo={currentSong.photo} date={currentSong.date} title={currentSong.title} />
         <Playlist handleClick={handleClick}/>
-        {open ? <Playerbottom nowTime={audioPlayer.current.currentTime} time={audioPlayer.current.duration} backToTen={backTen} goToTen={forwardTen} completed={currentSong.progress} checkWidth={checkWidth} clickRef={clickRef} isPlaying={isPlaying} playPause={togglePlayPause} onClick={()=> setOpen(!open)} id={active.id} photo={active.photo} title={active.title} next={nextPodcast} previous={previousPodcast}/> : <></>}
+        {open ? <Playerbottom isMuted={isMuted} muted={muted} nowTime={audioPlayer.current.currentTime} time={audioPlayer.current.duration} backToTen={backTen} goToTen={forwardTen} completed={currentSong.progress} checkWidth={checkWidth} clickRef={clickRef} isPlaying={isPlaying} playPause={togglePlayPause} onClick={()=> setOpen(!open)} id={currentSong.id} photo={currentSong.photo} title={currentSong.title} next={nextPodcast} previous={previousPodcast}/> : <></>}
       </div>
   )
 }

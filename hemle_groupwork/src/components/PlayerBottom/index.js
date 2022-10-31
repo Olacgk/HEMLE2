@@ -10,7 +10,7 @@ import Fullscreen from '../Fullscreen';
 
 
 
-const Playerbottom = ({time, nowTime, photo, title, id, playPause, isPlaying, next, previous, completed, clickRef, checkWidth, backToTen, goToTen, ...props}) => {
+const Playerbottom = ({muted, isMuted, time, nowTime, photo, title, id, playPause, isPlaying, next, previous, completed, clickRef, checkWidth, backToTen, goToTen, ...props}) => {
 
 
   return(
@@ -30,7 +30,7 @@ const Playerbottom = ({time, nowTime, photo, title, id, playPause, isPlaying, ne
                   {!isPlaying ? <MdPlayArrow onClick={playPause} size={'2rem'} className={'buttonbottom'}/> : <FaPause onClick={playPause} size={'2rem'} className={'buttonbottom'}/>}
                   <MdOutlineForward10 onClick={goToTen} size={'2rem'} className={'buttonbottom buttonbottom2'}/>
                   {/* <MdOpenInFull onClick={() => <Fullscreen/>} size={'2rem'}/> */}
-                  <Fullscreen nowTime={nowTime} time={time} completed={completed} checkWidth={checkWidth} clickRef={clickRef} isplaying={isPlaying} playPause={playPause} photo={photo} title={title} next={next} previous={previous} className={"buttonbottom2"}/>
+                  <Fullscreen isMuted={isMuted} muted={muted} nowTime={nowTime} time={time} completed={completed} checkWidth={checkWidth} clickRef={clickRef} isplaying={isPlaying} playPause={playPause} photo={photo} title={title} next={next} previous={previous} className={"buttonbottom2"}/>
                   <IoMdCloseCircle size={'2rem'} onClick={props.onClick} className={'buttonbottom'}/>
               </div>
           </div>

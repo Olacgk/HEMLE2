@@ -9,10 +9,9 @@ const PlaylistCard = ({id, photo, title, date, handleClick, audio, ...props}) =>
     
 
     return(
-        <div className="content" onClick={props.onClick}>
+        <div className="content">
             <div className={'cardInfo'}>
-              <div className={'firstPart'}>
-                <div></div>
+                <div className={'firstPart'} onClick={props.onClick}>
                   <img alt={'podcsat view'} src={photo} className={'castCover'}/>
                   <div className={'textPart'}>
                       <p className={'title'}>{id}. {title}</p>
@@ -22,11 +21,11 @@ const PlaylistCard = ({id, photo, title, date, handleClick, audio, ...props}) =>
                           <div className={'date'}>{date}</div>
                       </div>
                   </div>
-              </div>
-              <div className={'listAction'}>
+                </div>
+                <div className={'listAction'}>
                   <AiOutlineClockCircle />
                   <MdOutlineShare />
-              </div>
+                </div>
           </div>
         </div>
     )
