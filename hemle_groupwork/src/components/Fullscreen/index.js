@@ -2,16 +2,15 @@ import React, { useState } from "react";
 import './style.css'
 import Modal from 'react-modal'
 import Header from '../Header'
-import {BiArrowBack, BiTime} from 'react-icons/bi'
+import {BiArrowBack, BiTime, BiPlay, BiPause} from 'react-icons/bi'
 import {MdShare, MdOpenInFull} from 'react-icons/md'
 import ProgressBar from "../ProgressBar";
-import {FaPause, FaPlay} from 'react-icons/fa';
 import {BsChevronDoubleLeft, BsChevronDoubleRight, BsFullscreenExit} from 'react-icons/bs'
 import {GiSpeaker, GiSpeakerOff} from 'react-icons/gi'
 
 
 Modal.setAppElement("#root");
-const Fullscreen = ({muted, isMuted, title, photo, next, previous, isplaying, playPause, clickRef, checkWidth, completed, time=0, nowTime=0}) =>{
+const Fullscreen = ({speed=1, handleSpeed, muted, isMuted, title, photo, next, previous, isplaying, playPause, clickRef, checkWidth, completed, time=0, nowTime=0}) =>{
 
     const [openModal, setOpenModal] = useState(false);
     // const [isMuted, setIsMuted] = useState(false);
@@ -45,9 +44,19 @@ const Fullscreen = ({muted, isMuted, title, photo, next, previous, isplaying, pl
                             <ProgressBar checkWidth={checkWidth} completed={completed} clickRef={clickRef}/>
                             <div className="fullbuttonPlayer">
                                 <div className="fullbutton1">
-                                    {!isplaying ? <FaPlay onClick={playPause} size={'1.5rem'}/> : <FaPause onClick={playPause} size={'1.25rem'}/>}
+                                    {!isplaying ? <BiPlay onClick={playPause} size={'2.5rem'}/> : <BiPause onClick={playPause} size={'2.5rem'}/>}
                                     {!isMuted ? <GiSpeaker size={'2rem'} onClick={muted}/> : <GiSpeakerOff size={'2rem'} onClick={muted}/>}
                                     <BiTime size={'2rem'}/>
+                                    <select
+                                        className="velocity"
+                                        value={speed}
+                                        onChange={handleSpeed}
+                                    >
+                                        <option value="0.50">0.50x</option>
+                                        <option value="1">1x</option>
+                                        <option value="1.25">1.25x</option>
+                                        <option value="2">2x</option>
+                                    </select>
                                 </div>
                                 <div className="fullbutton2">
                                     <div className="previous" onClick={previous}>

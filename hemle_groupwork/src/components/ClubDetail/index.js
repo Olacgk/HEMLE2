@@ -14,7 +14,6 @@ const ClubDetail = ({blason, name, traineur, stadiumprinc, founded, actualeague,
         }else{
             elem.style.display = "grid"
         }
-        console.log(elem)
     }
 
     return(
