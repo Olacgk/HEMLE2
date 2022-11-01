@@ -55,13 +55,23 @@
 }
 .fullbutton1{
     cursor: pointer;
-    /* display: grid;
-    grid-template-columns: repeat(3, auto);
-    grid-gap: 20px; */
     display: flex;
-    text-align: center;
+    align-items: center;
+    justify-content: center;
     gap: 20px;
 }
+.velocity {
+    appearance: none;
+    background: none;
+    color: white;
+    outline: none;
+    border: none;
+    text-align: center;
+    font-size: 18px;
+  }
+  .velocity option{
+    background-color: black;
+  }
 .fullbutton2{
     display: grid;
     grid-template-columns: repeat(5, auto);
