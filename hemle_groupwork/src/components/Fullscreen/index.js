@@ -23,7 +23,6 @@ const Fullscreen = ({speed=1, handleSpeed, muted, isMuted, title, photo, next, p
         return `${returnedMinutes}:${returnedSeconds}`;
       }
 
-      console.log(time, nowTime)
     return(
         <div className="modalScreen">
             <MdOpenInFull onClick={()=>setOpenModal(true)} />
