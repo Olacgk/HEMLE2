@@ -89,12 +89,12 @@ const Podcasts = () => {
 
   const backTen = () => {
     audioPlayer.current.currentTime = Number( audioPlayer.current.currentTime - 10);
-    setCurrentSong( audioPlayer.current.currentTime );
+    setCurrentSong( {...currentSong, "progress":audioPlayer.current.currentTime} );
   }
 
   const forwardTen = () => {
     audioPlayer.current.currentTime = Number( audioPlayer.current.currentTime + 10);
-    setCurrentSong( audioPlayer.current.currentTime );
+    setCurrentSong( {...currentSong, "progress":audioPlayer.current.currentTime} );
   }
 
   const handleSpeed = (e) =>{
