@@ -3,6 +3,9 @@
     font-size: 30px;
     cursor: pointer;
 }
+.openFull{
+    color: white;
+}
 .fullscreenMod{
     background: #1D1D1B;
     color: white;

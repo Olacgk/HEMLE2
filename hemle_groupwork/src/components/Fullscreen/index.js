@@ -7,6 +7,7 @@ import {MdShare, MdOpenInFull} from 'react-icons/md'
 import ProgressBar from "../ProgressBar";
 import {BsChevronDoubleLeft, BsChevronDoubleRight, BsFullscreenExit} from 'react-icons/bs'
 import {GiSpeaker, GiSpeakerOff} from 'react-icons/gi'
+import {GrExpand} from 'react-icons/gr'
 
 
 Modal.setAppElement("#root");
@@ -25,7 +26,7 @@ const Fullscreen = ({speed=1, handleSpeed, muted, isMuted, title, photo, next, p
 
     return(
         <div className="modalScreen">
-            <MdOpenInFull onClick={()=>setOpenModal(true)} />
+            <GrExpand onClick={()=>setOpenModal(true)} className={"openFull"}/>
             <Modal className={'fullscreenMod'} isOpen={openModal}>
                 <Header />
                 <div className="fullbackground">
