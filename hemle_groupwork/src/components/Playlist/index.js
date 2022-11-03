@@ -19,9 +19,9 @@ const Playlist = ({handleClick}) => {
           <div className={'container'}>
               <p className={'playlist'}>Playlist</p>
               {
-                playlistContent.slice(0, next)?.map(playlist =>{
+                playlistContent.slice(0, next)?.map((playlist, key) =>{
                     return(
-                        <PlaylistCard  key={playlist.id} onClick={()=>{handleClick(playlist.id)}} date={playlist.date} id={playlist.id} photo={playlist.photo} title={playlist.title} audio={playlist.audio}/>
+                        <PlaylistCard  key={key} onClick={()=>{handleClick(playlist.id)}} date={playlist.date} id={playlist.id} photo={playlist.photo} title={playlist.title} audio={playlist.audio}/>
                     )
                 })
               }
