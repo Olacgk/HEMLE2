@@ -26,7 +26,7 @@ const Fullscreen = ({speed=1, handleSpeed, muted, isMuted, title, photo, next, p
 
     return(
         <div className="modalScreen">
-            <GrExpand onClick={()=>setOpenModal(true)} />
+            <GrExpand onClick={()=>setOpenModal(true)} className={"openFull"}/>
             <Modal className={'fullscreenMod'} isOpen={openModal}>
                 <Header />
                 <div className="fullbackground">
