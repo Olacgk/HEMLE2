@@ -12,7 +12,9 @@ const PlaylistCard = ({id, photo, title, date, handleClick, audio, ...props}) =>
         <div className="content">
             <div className={'cardInfo'}>
                 <div className={'firstPart'} onClick={props.onClick}>
-                  <img alt={'podcsat view'} src={photo} className={'castCover'}/>
+                  <div>
+                    <img alt={'podcsat view'} src={photo} className={'castCover'}/>
+                  </div>
                   <div className={'textPart'}>
                       <p className={'title'}>{id}. {title}</p>
                       <div className={'detail'}>

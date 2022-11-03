@@ -3,15 +3,14 @@ import './style.css'
 import Modal from 'react-modal'
 import Header from '../Header'
 import {BiArrowBack, BiTime, BiPlay, BiPause} from 'react-icons/bi'
-import {MdShare, MdOpenInFull} from 'react-icons/md'
+import {MdShare} from 'react-icons/md'
 import ProgressBar from "../ProgressBar";
-import {BsChevronDoubleLeft, BsChevronDoubleRight, BsFullscreenExit} from 'react-icons/bs'
+import {BsChevronDoubleLeft, BsChevronDoubleRight, BsFullscreenExit, BsArrowsAngleExpand} from 'react-icons/bs'
 import {GiSpeaker, GiSpeakerOff} from 'react-icons/gi'
-import {GrExpand} from 'react-icons/gr'
 
 
 Modal.setAppElement("#root");
-const Fullscreen = ({speed=1, handleSpeed, muted, isMuted, title, photo, next, previous, isplaying, playPause, clickRef, checkWidth, completed, time=0, nowTime=0}) =>{
+const Fullscreen = ({speed=1, id, handleSpeed, muted, isMuted, title, photo, next, previous, isplaying, playPause, clickRef, checkWidth, completed, time=0, nowTime=0}) =>{
 
     const [openModal, setOpenModal] = useState(false);
     // const [isMuted, setIsMuted] = useState(false);
@@ -26,7 +25,7 @@ const Fullscreen = ({speed=1, handleSpeed, muted, isMuted, title, photo, next, p
 
     return(
         <div className="modalScreen">
-            <GrExpand onClick={()=>setOpenModal(true)} className={"openFull"}/>
+            <BsArrowsAngleExpand onClick={()=>setOpenModal(true)} size={"1.5rem"}/>
             <Modal className={'fullscreenMod'} isOpen={openModal}>
                 <Header />
                 <div className="fullbackground">
@@ -37,7 +36,7 @@ const Fullscreen = ({speed=1, handleSpeed, muted, isMuted, title, photo, next, p
                                 <MdShare size={'2rem'}/>
                             </div>
                             <img src={photo} alt="cover podcast" className="fullscreenCover"/>
-                            <p className="fullscreenTitle">{title}</p>
+                            <p className="fullscreenTitle">{id}. {title}</p>
                         </div>
                         <div className="fullscreenPlayer">
                             <div className="fullscreenProgress">{calculateTime(nowTime)}/{calculateTime(time)}</div>
@@ -46,7 +45,7 @@ const Fullscreen = ({speed=1, handleSpeed, muted, isMuted, title, photo, next, p
                                 <div className="fullbutton1">
                                     {!isplaying ? <BiPlay onClick={playPause} size={'2.5rem'}/> : <BiPause onClick={playPause} size={'2.5rem'}/>}
                                     {!isMuted ? <GiSpeaker size={'2rem'} onClick={muted}/> : <GiSpeakerOff size={'2rem'} onClick={muted}/>}
-                                    <BiTime size={'2rem'}/>
+                                    <BiTime size={'1.5rem'}/>
                                     <select
                                         className="velocity"
                                         value={speed}
