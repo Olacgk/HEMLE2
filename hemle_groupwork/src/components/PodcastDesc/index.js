@@ -28,7 +28,7 @@ const PodcastDesc = ({speed, handleSpeed, nowTime, time, muted, isMuted, id, tit
                 <div className={'bouton'}>
                     {!isplaying ? <button className={'play'} onClick={playPause}>
                         A L'ECOUTE
-                        <GiSpeaker size={'1rem'}/>
+                        <GiSpeaker size={'1.5rem'}/>
                     </button>
                     : <button className={'play'} onClick={playPause}>
                     PAUSE
