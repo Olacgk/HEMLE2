@@ -7,7 +7,7 @@ import {MdShare} from 'react-icons/md'
 import ProgressBar from "../ProgressBar";
 import {BsChevronDoubleLeft, BsChevronDoubleRight, BsFullscreenExit} from 'react-icons/bs'
 import {GiSpeaker, GiSpeakerOff} from 'react-icons/gi'
-import {GrExpand} from 'react-icons/gr'
+import {BsArrowsAngleExpand} from 'react-icons/bs'
 
 
 Modal.setAppElement("#root");
@@ -23,12 +23,16 @@ const Fullscreen = ({speed=1, handleSpeed, muted, isMuted, title, photo, next, p
         const returnedSeconds = seconds < 10 ? `0${seconds}` : `${seconds}`;
         return `${returnedMinutes}:${returnedSeconds}`;
       }
-
+    
+      const OVERLAY_STYLE ={
+        zIndex: "1000",
+        overflowY: "auto"
+      }
     return(
         <div className="modalScreen">
-            <GrExpand onClick={()=>setOpenModal(true)} className={"openFull"}/>
-            <Modal className={'fullscreenMod'} isOpen={openModal}>
-                <Header />
+            <BsArrowsAngleExpand onClick={()=>setOpenModal(true)} size={"1.5rem"}/>
+            <Modal className={'fullscreenMod'} isOpen={openModal} style={OVERLAY_STYLE}>
+                <Header className="toHide"/>
                 <div className="fullbackground">
                     <div className="floufullbackground">
                         <div className="modalContent">
@@ -46,7 +50,7 @@ const Fullscreen = ({speed=1, handleSpeed, muted, isMuted, title, photo, next, p
                                 <div className="fullbutton1">
                                     {!isplaying ? <BiPlay onClick={playPause} size={'2.5rem'}/> : <BiPause onClick={playPause} size={'2.5rem'}/>}
                                     {!isMuted ? <GiSpeaker size={'2rem'} onClick={muted}/> : <GiSpeakerOff size={'2rem'} onClick={muted}/>}
-                                    <BiTime size={'2rem'}/>
+                                    <BiTime size={'2rem'} className={"toHide"}/>
                                     <select
                                         className="velocity"
                                         value={speed}
