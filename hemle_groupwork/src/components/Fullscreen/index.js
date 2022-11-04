@@ -10,10 +10,9 @@ import {GiSpeaker, GiSpeakerOff} from 'react-icons/gi'
 
 
 Modal.setAppElement("#root");
-const Fullscreen = ({speed=1, id, handleSpeed, muted, isMuted, title, photo, next, previous, isplaying, playPause, clickRef, checkWidth, completed, time=0, nowTime=0}) =>{
+const Fullscreen = ({speed, id, handleSpeed, muted, isMuted, title, photo, next, previous, isplaying, playPause, clickRef, checkWidth, completed, time=0, nowTime=0}) =>{
 
     const [openModal, setOpenModal] = useState(false);
-    // const [isMuted, setIsMuted] = useState(false);
 
     const calculateTime = (secs) => {
         const minutes = Math.floor(secs / 60);
@@ -23,15 +22,15 @@ const Fullscreen = ({speed=1, id, handleSpeed, muted, isMuted, title, photo, nex
         return `${returnedMinutes}:${returnedSeconds}`;
       }
     
-      const OVERLAY_STYLE ={
-        zIndex: "1000",
-        overflowY: "auto"
-      }
+    //   const OVERLAY_STYLE ={
+    //     zIndex: "1000",
+    //     overflowY: "auto"
+    //   }
     return(
         <div className="modalScreen">
             <BsArrowsAngleExpand onClick={()=>setOpenModal(true)} size={"1.5rem"}/>
             <Modal className={'fullscreenMod'} isOpen={openModal}>
-                <Header />
+                {/* <Header /> */}
                 <div className="fullbackground">
                     <div className="floufullbackground">
                         <div className="modalContent">
@@ -50,7 +49,7 @@ const Fullscreen = ({speed=1, id, handleSpeed, muted, isMuted, title, photo, nex
                                     {!isplaying ? <BiPlay onClick={playPause} size={'2.5rem'}/> : <BiPause onClick={playPause} size={'2.5rem'}/>}
                                     {!isMuted ? <GiSpeaker size={'2rem'} onClick={muted}/> : <GiSpeakerOff size={'2rem'} onClick={muted}/>}
                                     <BiTime size={'1.5rem'}/>
-                                    <select
+                                    {/* <select
                                         className="velocity"
                                         value={speed}
                                         onChange={handleSpeed}
@@ -59,7 +58,8 @@ const Fullscreen = ({speed=1, id, handleSpeed, muted, isMuted, title, photo, nex
                                         <option value="1">1x</option>
                                         <option value="1.25">1.25x</option>
                                         <option value="2">2x</option>
-                                    </select>
+                                    </select> */}
+                                    <p onClick={()=>{handleSpeed(speed)}}>{speed+"x"}</p>
                                 </div>
                                 <div className="fullbutton2">
                                     <div className="previous" onClick={previous}>
