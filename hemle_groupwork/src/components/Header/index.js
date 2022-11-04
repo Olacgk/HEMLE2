@@ -7,10 +7,10 @@ import {AiOutlineDown} from "react-icons/ai";
 import logo1 from "../../assets/Logo_Hemlè-V2-39.svg";
 import "./style.css"
 
-const Header = () => {
+const Header = ({...props}) => {
     const [open, setOpen] = useState(false);
     return(
-        <header>
+        <header className={props.className}>
             <Link to={'/'}>
                 <img className={'logo'} alt={'Logo AF'} src={logo1}/>
             </Link>

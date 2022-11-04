@@ -25,6 +25,7 @@
     border-radius: 100%;
     background: white;
     color: black;
+    padding: 5px;
 }
 .podcastdetail{
     align-items: center;
@@ -35,9 +36,12 @@
     line-height: 32px;
 }
 .buttonPlayerbottom{
-    display: grid;
-    grid-template-columns: repeat(5, auto);
-    grid-gap: 20px;
+    /* display: grid;
+    grid-template-columns: repeat(6, auto);
+    grid-gap: 20px; */
+    display: flex;
+    text-align: center;
+    gap: 20px;
 }
 .buttonbottom{
     cursor: pointer;
