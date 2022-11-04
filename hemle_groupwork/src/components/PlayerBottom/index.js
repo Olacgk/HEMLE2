@@ -1,7 +1,6 @@
 import React from 'react';
 import {FiRadio} from "react-icons/fi";
-import {MdOutlineForward10, MdOutlineReplay10, MdPlayArrow} from "react-icons/md";
-import { FaPause } from 'react-icons/fa';
+import {MdOutlineForward10, MdOutlineReplay10, MdPlayArrow, MdStop, MdPause} from "react-icons/md";
 import {IoMdCloseCircle} from "react-icons/io";
 import ProgressBar from "../ProgressBar"
 import './style.css'
@@ -10,7 +9,7 @@ import Fullscreen from '../Fullscreen';
 
 
 
-const Playerbottom = ({speed, handleSpeed, muted, isMuted, time, nowTime, photo, title, id, playPause, isPlaying, next, previous, completed, clickRef, checkWidth, backToTen, goToTen, ...props}) => {
+const Playerbottom = ({stopMusic, speed, handleSpeed, muted, isMuted, time, nowTime, photo, title, id, playPause, isPlaying, next, previous, completed, clickRef, checkWidth, backToTen, goToTen, ...props}) => {
 
 
   return(
@@ -27,10 +26,10 @@ const Playerbottom = ({speed, handleSpeed, muted, isMuted, time, nowTime, photo,
               </div>
               <div className={'buttonPlayerbottom'}>
                   <MdOutlineReplay10 onClick={backToTen} size={'2rem'} className={'buttonbottom buttonbottom2'}/>
-                  {!isPlaying ? <MdPlayArrow onClick={playPause} size={'2rem'} className={'buttonbottom'}/> : <FaPause onClick={playPause} size={'2rem'} className={'buttonbottom'}/>}
+                  {!isPlaying ? <MdPlayArrow onClick={playPause} size={'2rem'} className={'buttonbottom'}/> : <MdPause onClick={playPause} size={'2rem'} className={'buttonbottom'}/>}
                   <MdOutlineForward10 onClick={goToTen} size={'2rem'} className={'buttonbottom buttonbottom2'}/>
-                  {/* <MdOpenInFull onClick={() => <Fullscreen/>} size={'2rem'}/> */}
-                  <Fullscreen speed={speed} handleSpeed={handleSpeed} isMuted={isMuted} muted={muted} nowTime={nowTime} time={time} completed={completed} checkWidth={checkWidth} clickRef={clickRef} isplaying={isPlaying} playPause={playPause} photo={photo} title={title} next={next} previous={previous} className={"buttonbottom2"}/>
+                  <MdStop onClick={stopMusic} size={'2rem'} className={'buttonbottom'}/>
+                  <Fullscreen id={id} speed={speed} handleSpeed={handleSpeed} isMuted={isMuted} muted={muted} nowTime={nowTime} time={time} completed={completed} checkWidth={checkWidth} clickRef={clickRef} isplaying={isPlaying} playPause={playPause} photo={photo} title={title} next={next} previous={previous} className={"buttonbottom2"}/>
                   <IoMdCloseCircle size={'2rem'} onClick={props.onClick} className={'buttonbottom'}/>
               </div>
           </div>

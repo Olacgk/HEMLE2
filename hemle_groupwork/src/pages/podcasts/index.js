@@ -18,7 +18,9 @@ const Podcasts = () => {
     setIsMuted(!isMuted)
   }
 
+
   const handleClick = (id)=>{
+    audioPlayer.current.currentTime = 0
     setOpen(true)
     setCurrentSong(playlistContent[id -1])
     setIsPlaying(true)
@@ -103,13 +105,19 @@ const Podcasts = () => {
     setCurrentSong({...currentSong, "value":speed})
   }
 
+  const stopMusic = ()=>{
+    setIsPlaying(false)
+    setOpen(false)
+    audioPlayer.current.currentTime = 0
+  }
+
   return(
       <div className="global">
         <Header />
         <audio onRateChange={handleSpeed} muted={isMuted} autoPlay src={currentSong.audio} ref={audioPlayer} onTimeUpdate={onPlaying} onEnded={nextPodcast}/> 
         <PodcastDesc speed={currentSong.value} handleSpeed={handleSpeed} isMuted={isMuted} muted={muted} nowTime={currentSong.progress} time={currentSong.length} completed={currentSong.progress} checkWidth={checkWidth} clickRef={clickRef} playPause={togglePlayPause} isplaying={isPlaying} previous={previousPodcast} next={nextPodcast} id={currentSong.id} photo={currentSong.photo} date={currentSong.date} title={currentSong.title} />
         <Playlist handleClick={handleClick}/>
-        {open ? <Playerbottom speed={currentSong.value} handleSpeed={handleSpeed} isMuted={isMuted} muted={muted} nowTime={audioPlayer.current.currentTime} time={audioPlayer.current.duration} backToTen={backTen} goToTen={forwardTen} completed={currentSong.progress} checkWidth={checkWidth} clickRef={clickRef} isPlaying={isPlaying} playPause={togglePlayPause} onClick={()=> setOpen(!open)} id={currentSong.id} photo={currentSong.photo} title={currentSong.title} next={nextPodcast} previous={previousPodcast}/> : <></>}
+        {open ? <Playerbottom stopMusic={stopMusic} speed={currentSong.value} handleSpeed={handleSpeed} isMuted={isMuted} muted={muted} nowTime={audioPlayer.current.currentTime} time={audioPlayer.current.duration} backToTen={backTen} goToTen={forwardTen} completed={currentSong.progress} checkWidth={checkWidth} clickRef={clickRef} isPlaying={isPlaying} playPause={togglePlayPause} onClick={()=> setOpen(!open)} id={currentSong.id} photo={currentSong.photo} title={currentSong.title} next={nextPodcast} previous={previousPodcast}/> : <></>}
       </div>
   )
 }
