@@ -28,7 +28,6 @@ const Podcasts = () => {
   const nextPodcast = () =>{
     const index = playlistContent.findIndex(x=>x.id === currentSong.id);
 
-    console.log(playlistContent.length)
     if (index === playlistContent.length-1)
     {
       setCurrentSong(playlistContent[0])
@@ -120,7 +119,7 @@ const Podcasts = () => {
 
   return(
       <div className="global">
-        {/* <Header /> */}
+        <Header />
         <audio muted={isMuted} autoPlay src={currentSong.audio} ref={audioPlayer} onTimeUpdate={onPlaying} onEnded={nextPodcast}/> 
         <PodcastDesc speed={rate} handleSpeed={handleSpeed} isMuted={isMuted} muted={muted} nowTime={currentSong.progress} time={currentSong.length} completed={currentSong.progress} checkWidth={checkWidth} clickRef={clickRef} playPause={togglePlayPause} isplaying={isPlaying} previous={previousPodcast} next={nextPodcast} id={currentSong.id} photo={currentSong.photo} date={currentSong.date} title={currentSong.title} />
         <Playlist handleClick={handleClick}/>

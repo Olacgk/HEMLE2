@@ -9,27 +9,27 @@ const PlaylistCard = ({id, photo, title, date, handleClick, audio, ...props}) =>
     
 
     return(
-        <div className="content">
-            <div className={'cardInfo'}>
-                <div className={'firstPart'} onClick={props.onClick}>
-                  <div>
-                    <img alt={'podcsat view'} src={photo} className={'castCover'}/>
-                  </div>
-                  <div className={'textPart'}>
-                      <p className={'title'}>{id}. {title}</p>
-                      <div className={'detail'}>
-                          <p className={'name'}>Nom Prénom - Youtube </p>
-                          <BsDot className={'dot'}/>
-                          <div className={'date'}>{date}</div>
-                      </div>
-                  </div>
+      <div className="content">
+        <div className={'cardInfo'}>
+          <div className={'firstPart'} onClick={props.onClick}>
+            <div className={'castCover'} style={{backgroundImage:`url(${photo})`}}>
+              {/* <img alt={'podcsat view'} src={photo}/> */}
+            </div>
+            <div className={'textPart'}>
+                <p className={'title'}>{id}. {title}</p>
+                <div className={'detail'}>
+                    <p className={'name'}>Nom Prénom - Youtube </p>
+                    <BsDot className={'dot'}/>
+                    <div className={'date'}>{date}</div>
                 </div>
-                <div className={'listAction'}>
-                  <AiOutlineClockCircle />
-                  <MdOutlineShare />
-                </div>
+            </div>
+          </div>
+          <div className={'listAction'}>
+            <AiOutlineClockCircle />
+            <MdOutlineShare />
           </div>
         </div>
+      </div>
     )
 }
 

@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import './style.css'
 import Modal from 'react-modal'
-import Header from '../Header'
 import {BiArrowBack, BiTime, BiPlay, BiPause} from 'react-icons/bi'
 import {MdShare} from 'react-icons/md'
 import ProgressBar from "../ProgressBar";
