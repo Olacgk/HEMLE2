@@ -29,7 +29,7 @@ const Playerbottom = ({stopMusic, speed, handleSpeed, muted, isMuted, time, nowT
                   {!isPlaying ? <MdPlayArrow onClick={playPause} size={'2rem'} className={'buttonbottom'}/> : <MdPause onClick={playPause} size={'2rem'} className={'buttonbottom'}/>}
                   <MdOutlineForward10 onClick={goToTen} size={'2rem'} className={'buttonbottom buttonbottom2'}/>
                   <MdStop onClick={stopMusic} size={'2rem'} className={'buttonbottom buttonbottom2'}/>
-                  <Fullscreen id={id} speed={speed} handleSpeed={handleSpeed} isMuted={isMuted} muted={muted} nowTime={nowTime} time={time} completed={completed} checkWidth={checkWidth} clickRef={clickRef} isplaying={isPlaying} playPause={playPause} photo={photo} title={title} next={next} previous={previous} className={"buttonbottom2"}/>
+                  <Fullscreen className={"modalScreen"} id={id} speed={speed} handleSpeed={handleSpeed} isMuted={isMuted} muted={muted} nowTime={nowTime} time={time} completed={completed} checkWidth={checkWidth} clickRef={clickRef} isplaying={isPlaying} playPause={playPause} photo={photo} title={title} next={next} previous={previous}/>
                   <IoMdCloseCircle size={'2rem'} onClick={props.onClick} className={'buttonbottom'}/>
               </div>
           </div>

@@ -1,3 +1,8 @@
+.modalScreen{
+    margin: 0 10px;
+    font-size: 30px;
+    cursor: pointer;
+}
 .playerbottom{
     bottom: 0;
     width: 100%;
@@ -58,6 +63,9 @@
         /* justify-content: space-between; */
     }
     .buttonbottom2{
+        display: none;
+    }
+    .modalScreen{
         display: none;
     }
     .buttonPlayerbottom{

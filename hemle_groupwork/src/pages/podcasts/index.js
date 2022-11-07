@@ -40,6 +40,7 @@ const Podcasts = () => {
     }
     audioPlayer.current.currentTime = 0;
     setRate(1)
+    setIsPlaying(true)
   }
   const previousPodcast = () => {
     const index = playlistContent.findIndex(x=>x.id === currentSong.id);
@@ -53,6 +54,7 @@ const Podcasts = () => {
     }
     audioPlayer.current.currentTime = 0;
     setRate(1)
+    setIsPlaying(true)
   }
 
   const audioPlayer = useRef();
@@ -99,7 +101,7 @@ const Podcasts = () => {
   }
 
   const forwardTen = () => {
-    audioPlayer.current.currentTime = Number( audioPlayer.current.currentTime + 10);
+    audioPlayer.current.currentTime = Number( audioPlayer.current.currentTime)+ 10;
     setCurrentSong( {...currentSong, "progress":audioPlayer.current.currentTime} );
   }
 
@@ -125,7 +127,7 @@ const Podcasts = () => {
       <div className="global">
         <Header />
         <audio muted={isMuted} autoPlay src={currentSong.audio} ref={audioPlayer} onTimeUpdate={onPlaying} onEnded={nextPodcast}/> 
-        <PodcastDesc isstopped={isStopped} speed={rate} handleSpeed={handleSpeed} isMuted={isMuted} muted={muted} nowTime={currentSong.progress} time={currentSong.length} completed={currentSong.progress} checkWidth={checkWidth} clickRef={clickRef} playPause={togglePlayPause} isplaying={isPlaying} previous={previousPodcast} next={nextPodcast} id={currentSong.id} photo={currentSong.photo} date={currentSong.date} title={currentSong.title} />
+        <PodcastDesc goToTen={forwardTen} backToTen={backTen} isstopped={isStopped} speed={rate} handleSpeed={handleSpeed} isMuted={isMuted} muted={muted} nowTime={currentSong.progress} time={currentSong.length} completed={currentSong.progress} checkWidth={checkWidth} clickRef={clickRef} playPause={togglePlayPause} isplaying={isPlaying} previous={previousPodcast} next={nextPodcast} id={currentSong.id} photo={currentSong.photo} date={currentSong.date} title={currentSong.title} />
         <Playlist handleClick={handleClick}/>
         {open ? <Playerbottom stopMusic={stopMusic} speed={rate} handleSpeed={handleSpeed} isMuted={isMuted} muted={muted} nowTime={audioPlayer.current.currentTime} time={audioPlayer.current.duration} backToTen={backTen} goToTen={forwardTen} completed={currentSong.progress} checkWidth={checkWidth} clickRef={clickRef} isPlaying={isPlaying} playPause={togglePlayPause} onClick={()=> setOpen(!open)} id={currentSong.id} photo={currentSong.photo} title={currentSong.title} next={nextPodcast} previous={previousPodcast}/> : <></>}
       </div>
