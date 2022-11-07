@@ -1,13 +1,9 @@
-.modalScreen{
-    margin: 0 10px;
-    font-size: 30px;
-    cursor: pointer;
-}
 .fullscreenMod{
     background: #1D1D1B;
     color: white;
     width: 100%;
     height: 100%;
+    overflow-y: hidden;
 }
 .fullbackground{
     background-image: url('../../assets/podcastCover.png');
@@ -21,6 +17,10 @@
     background: rgba(0, 0, 0, 0.80);
     width: 100%;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
 }
 .modalContent{
     text-align: center;
@@ -34,7 +34,10 @@
     cursor: pointer;
 }
 .fullscreenCover{
-    margin: 30px 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: auto;
     width: 300px;
     height: 300px;
 }
@@ -47,6 +50,9 @@
 .fullscreenPlayer{
     display: block;
     margin: 10px 60px;
+}
+.responsebutton{
+    display: none;
 }
 .fullbuttonPlayer{
     display: flex;
@@ -73,21 +79,29 @@
     background-color: black;
   }
 .fullbutton2{
-    display: grid;
-    grid-template-columns: repeat(5, auto);
-    grid-gap: 20px;
+    display: flex;
+    gap: 20px;
     margin: 20px 0;
 }
 .fullscreenProgress{
     margin: 20px 0;
+    left: 0;
 }
 .next{
     cursor: pointer;
     display: flex;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 16px;
 }
 .previous{
     cursor: pointer;
     display: flex;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 16px;
 }
 .exit{
     cursor: pointer;
@@ -98,15 +112,69 @@
         margin: 0 20px;
     }
     .fullscreenCover{
-        margin: 30px 0;
-        width: 100px;
-        height: 100px;
+        /* margin-top: 116px; */
+        height: 172px;
+        width: 189px;
+
+    }
+    .responseplay{
+        display: none;
+    }
+    .previous {
+        font-size: 12px;
+    }
+    .next{
+        font-size: 12px;
     }
     .fullscreenTitle{
-        margin: 30px 0;
+        margin: 12px 0;
         font-weight: 600;
-        font-size: 18px;
+        font-size: 14px;
         line-height: 26px;
+    }
+    .responsebutton{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .fullbuttonPlayer{
+        justify-content: space-between;
+        margin: 0 10px;
+    }
+    .toHide{
+        display: none;
+    }
+    .fullscreenPlayer{
+        bottom: 10px;
+    }
+}
+
+@media screen and (min-width:592px) and (max-width:768px) {
+    .fullscreenCover{
+        margin-top: 116px;
+        height: 172px;
+        width: 189px;
+
+    }
+    .responseplay{
+        display: none;
+    }
+    .previous {
+        font-size: 12px;
+    }
+    .next{
+        font-size: 12px;
+    }
+    .fullscreenTitle{
+        margin: 12px 0;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 26px;
+    }
+    .responsebutton{
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
     .fullbuttonPlayer{
         justify-content: space-between;

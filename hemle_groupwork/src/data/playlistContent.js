@@ -14,7 +14,7 @@ export const playlistContent = [
     },
     {
         id: 2,
-        title: "CAN 2022 : Sadio Mané, le guide du Sénégatttttttttttttttttttttttttttttttttttttttttttttttttttttttttl face au Burkina Faso",
+        title: "CAN 2022 : Sadio Mané, le guide du Sénégal face au Burkina Faso face au Burkina Faso face au Burkina Faso face au Burkina Faso face au Burkina Faso",
         date: "19 Juin 2022",
         photo: cover,
         audio: track2
