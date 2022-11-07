@@ -20,7 +20,7 @@ const Playerbottom = ({stopMusic, speed, handleSpeed, muted, isMuted, time, nowT
                   <img alt={'view'} src={photo} className={'coverPlayerbottom'}/>
                   <FiRadio size={"2rem"} className={"playerbottomRadiobutton buttonbottom2"}/>
                   <div className={'podcastdetail'}>
-                      <div className={'playerbottomPodcastitle buttonbottom2'}>{id}. {title}</div>
+                      <div className={'playerbottomPodcastitle'}>{id}. {title}</div>
                       <div className='buttonbottom2'>Youtube/ Nom Prénom</div>
                   </div>
               </div>
@@ -28,7 +28,7 @@ const Playerbottom = ({stopMusic, speed, handleSpeed, muted, isMuted, time, nowT
                   <MdOutlineReplay10 onClick={backToTen} size={'2rem'} className={'buttonbottom buttonbottom2'}/>
                   {!isPlaying ? <MdPlayArrow onClick={playPause} size={'2rem'} className={'buttonbottom'}/> : <MdPause onClick={playPause} size={'2rem'} className={'buttonbottom'}/>}
                   <MdOutlineForward10 onClick={goToTen} size={'2rem'} className={'buttonbottom buttonbottom2'}/>
-                  <MdStop onClick={stopMusic} size={'2rem'} className={'buttonbottom'}/>
+                  <MdStop onClick={stopMusic} size={'2rem'} className={'buttonbottom buttonbottom2'}/>
                   <Fullscreen id={id} speed={speed} handleSpeed={handleSpeed} isMuted={isMuted} muted={muted} nowTime={nowTime} time={time} completed={completed} checkWidth={checkWidth} clickRef={clickRef} isplaying={isPlaying} playPause={playPause} photo={photo} title={title} next={next} previous={previous} className={"buttonbottom2"}/>
                   <IoMdCloseCircle size={'2rem'} onClick={props.onClick} className={'buttonbottom'}/>
               </div>

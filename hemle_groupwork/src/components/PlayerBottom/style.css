@@ -55,17 +55,50 @@
     .playerbottomContent{
         padding: 10px 20px;
         align-items: center;
-        justify-content: space-between;
+        /* justify-content: space-between; */
     }
     .buttonbottom2{
         display: none;
     }
+    .buttonPlayerbottom{
+        gap: 10px;
+    }
     .playerbottomPodcastitle{
         font-size: 14px;
         line-height: 20px;
+        /* text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        width: 200px; */
+        -webkit-line-clamp: 2;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
     }
     .coverPlayerbottom{
         width: 50px;
         height: 50px;
     }
+    
+}
+
+@media screen and (min-width:576px) and (max-width:768px) {
+    .playerbottomContent{
+        padding: 10px 20px;
+        align-items: center;
+        /* justify-content: space-between; */
+    }
+    .buttonbottom2{
+        display: none;
+    }
+    .buttonPlayerbottom{
+        gap: 10px;
+    }
+}
+
+@media screen and (min-width:768px) and (max-width:992px) {
+    .buttonbottom2{
+        display: none;
+    }
+    
 }

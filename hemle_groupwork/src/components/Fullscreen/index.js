@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import './style.css'
 import Modal from 'react-modal'
-import {BiArrowBack, BiTime, BiPlay, BiPause} from 'react-icons/bi'
-import {MdShare} from 'react-icons/md'
+import {BiArrowBack, BiShareAlt, BiTime, BiPlay, BiPause} from 'react-icons/bi'
 import ProgressBar from "../ProgressBar";
 import {BsChevronDoubleLeft, BsChevronDoubleRight, BsFullscreenExit, BsArrowsAngleExpand} from 'react-icons/bs'
 import {GiSpeaker, GiSpeakerOff} from 'react-icons/gi'
@@ -26,7 +25,7 @@ const Fullscreen = ({speed, id, handleSpeed, muted, isMuted, title, photo, next,
     //     overflowY: "auto"
     //   }
     return(
-        <div className="modalScreen">
+        <div className="modalScreen buttonbottom2">
             <BsArrowsAngleExpand onClick={()=>setOpenModal(true)} size={"1.5rem"}/>
             <Modal className={'fullscreenMod'} isOpen={openModal}>
                 {/* <Header /> */}
@@ -35,7 +34,7 @@ const Fullscreen = ({speed, id, handleSpeed, muted, isMuted, title, photo, next,
                         <div className="modalContent">
                             <div className="sectionBouton">
                                 <BiArrowBack onClick={()=>setOpenModal(false)} size={'2rem'}/>
-                                <MdShare size={'2rem'}/>
+                                <BiShareAlt size={'2rem'}/>
                             </div>
                             <img src={photo} alt="cover podcast" className="fullscreenCover"/>
                             <p className="fullscreenTitle">{id}. {title}</p>

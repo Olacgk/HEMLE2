@@ -8,7 +8,7 @@ import Fullscreen from "../Fullscreen";
 import { FaPause } from "react-icons/fa";
 
 Modal.setAppElement("#root");
-const PodcastDesc = ({speed, handleSpeed, nowTime, time, muted, isMuted, id, title, photo, date, next, previous, isplaying, playPause, checkWidth, clickRef, completed}) => {
+const PodcastDesc = ({isstopped, speed, handleSpeed, nowTime, time, muted, isMuted, id, title, photo, date, next, previous, isplaying, playPause, checkWidth, clickRef, completed}) => {
 
     return(
         <div className="description">
@@ -18,7 +18,7 @@ const PodcastDesc = ({speed, handleSpeed, nowTime, time, muted, isMuted, id, tit
                     <h5 className={'tag first'}>CAN</h5>
                     <h5 className={'tag second'}>Records</h5>
                 </div>
-                <p className={'title'}>{id}.{title}</p>
+                <p className={'desctitle'}>{id}.{title}</p>
                 <p className={'desc'}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Blandit tellus in ut elementum Lorem ipsum dolor sit amet, consectetur adipiscing elit. Blandit tellus </p>
                 <div className={'someDetail'}>
                     <p className={'name'}>Charles Mbuya - AF </p>
@@ -26,7 +26,10 @@ const PodcastDesc = ({speed, handleSpeed, nowTime, time, muted, isMuted, id, tit
                     <div className={'date'}>{date}</div>
                 </div>
                 <div className={'bouton'}>
-                    {!isplaying ? <button className={'play'} onClick={playPause}>
+                    {isstopped ? <button className={'startplay'} onClick={playPause}>
+                        ECOUTER
+                        <GiSpeaker size={'1.5rem'}/>
+                    </button> : !isplaying ? <button className={'play'} onClick={playPause}>
                         A L'ECOUTE
                         <GiSpeaker size={'1.5rem'}/>
                     </button>

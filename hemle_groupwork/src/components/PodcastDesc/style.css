@@ -39,7 +39,7 @@
     justify-content: center;
     border-radius: 1.6px;
 }
-.title{
+.desctitle{
     font-size: 24px;
     font-weight: 600;
     line-height: 36px;
@@ -102,6 +102,23 @@
 .play:hover{
     background-color: #FFFF27;
     color: black;
+}
+.startplay{
+    cursor: pointer;
+    display: flex;
+    background: transparent;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid white;
+    border-radius: 4px;
+    padding: 10px 10px;
+    width: 150px;
+    height: 46px;
+    gap: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
 }
 .action{
     cursor: pointer;

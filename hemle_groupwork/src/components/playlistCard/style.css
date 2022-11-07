@@ -32,10 +32,10 @@
     font-size: 18px;
     font-weight: bold;
     cursor: pointer;
-    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
     overflow: hidden;
-    white-space: nowrap; 
-    max-width: 1000px;
 }
 .detail{
     display: flex;
@@ -67,10 +67,14 @@
 @media (min-width:768px) and (max-width:992px) {
     .title{
         width: 450px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap; 
+        max-width: 1000px;
     }
 }
 
-@media (max-width: 768px) {
+@media (min-width:576px) and (max-width: 768px) {
     .listAction{
         display: none;
     }
@@ -83,11 +87,17 @@
         height: 150px;
     }
     .title{
-        width: 400px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        width: 300px;
     }
 }
 
 @media (max-width:576px) {
+    .listAction{
+        display: none;
+    }
     .firstPart{
         display: block;
         text-align: center;
@@ -100,7 +110,22 @@
     .detail{
         display: block;
     }
+}
+
+@media screen and (min-width: 768px) and (max-width:992px) {
     .title{
-        width: 200px;
+        width: 400px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+}
+
+@media screen and (min-width:992px) {
+    .title{
+        width: 1000px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
     }
 }
