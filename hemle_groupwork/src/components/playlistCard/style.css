@@ -34,8 +34,8 @@
     cursor: pointer;
     text-overflow: ellipsis;
     overflow: hidden;
-    white-space: nowrap;
-    width: 1000px;
+    white-space: nowrap; 
+    max-width: 1000px;
 }
 .detail{
     display: flex;
@@ -64,8 +64,10 @@
     cursor: pointer;
 }
 
-@media (min-width:768px) {
-    
+@media (min-width:768px) and (max-width:992px) {
+    .title{
+        width: 450px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -91,11 +93,14 @@
         text-align: center;
     }
     .castCover{
-        margin: auto;
-        width: 100%;
+        margin: 1em;
+        width: 200px;
         height: 200px;
     }
     .detail{
         display: block;
+    }
+    .title{
+        width: 200px;
     }
 }
