@@ -30,23 +30,26 @@ const Fullscreen = ({backToTen, goToTen, speed, id, handleSpeed, muted, isMuted,
             <BsArrowsAngleExpand onClick={()=>setOpenModal(true)} size={"1.5rem"}/>
             <Modal className={'fullscreenMod'} isOpen={openModal}>
                 {/* <Header /> */}
-                <div className="fullbackground">
+                <div className="fullbackground" style={{backgroundImage:`url(${photo})`}}>
                     <div className="floufullbackground">
                         <div className="modalContent">
                             <div className="sectionBouton">
                                 <BiArrowBack onClick={()=>setOpenModal(false)} size={'2rem'}/>
                                 <BiShareAlt size={'2rem'}/>
                             </div>
-                            <img src={photo} alt="cover podcast" className="fullscreenCover"/>
-                            <p className="fullscreenTitle">{id}. {title}</p>
+                            {/* <img src={photo} alt="cover podcast" /> */}
                         </div>
+                        <div className="fullscreenCover" style={{backgroundImage:`url(${photo})`}}>
+
+                        </div>
+                        <p className="fullscreenTitle">{id}. {title}</p>
                         <div className="fullscreenPlayer">
                             <div className="responsebutton">
                                 <MdOutlineReplay10 onClick={backToTen} size={'2rem'} className={'buttonbottom'}/>
                                 {!isplaying ? <BiPlay onClick={playPause} size={'2.5rem'}/> : <BiPause onClick={playPause} size={'2.5rem'}/>}
                                 <MdOutlineForward10 onClick={goToTen} size={'2rem'} className={'buttonbottom'}/>
                             </div>
-                            <div className="fullscreenProgress">{calculateTime(nowTime)}/{calculateTime(time)}</div>
+                            <p className="fullscreenProgress">{calculateTime(nowTime)} / {calculateTime(time)}</p>
                             <ProgressBar checkWidth={checkWidth} completed={completed} clickRef={clickRef}/>
                             <div className="fullbuttonPlayer">
                                 <div className="fullbutton1">
@@ -56,14 +59,14 @@ const Fullscreen = ({backToTen, goToTen, speed, id, handleSpeed, muted, isMuted,
                                     <p onClick={()=>{handleSpeed(speed)}}>{speed+"x"}</p>
                                 </div>
                                 <div className="fullbutton2">
-                                    <div className="previous" onClick={previous}>
+                                    <button className="previous" onClick={previous}>
                                         <BsChevronDoubleLeft size={'1.25em'}/>
-                                        <p>Précédent</p>
-                                    </div>
-                                    <div className="next" onClick={next}>
-                                        <p>Suivant</p>
+                                        Précédent
+                                    </button>
+                                    <button className="next" onClick={next}>
+                                        Suivant
                                         <BsChevronDoubleRight size={'1.25em'}/>
-                                    </div>
+                                    </button>
                                     <BsFullscreenExit className="exit toHide"  onClick={()=>setOpenModal(false)} size={'1.25rem'}/>
                                 </div>
                             </div>

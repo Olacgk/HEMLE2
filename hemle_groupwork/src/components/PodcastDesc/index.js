@@ -6,6 +6,7 @@ import {AiOutlineClockCircle} from "react-icons/ai";
 import Modal from "react-modal";
 import Fullscreen from "../Fullscreen";
 import { FaPause } from "react-icons/fa";
+import {FiRadio} from "react-icons/fi"
 
 Modal.setAppElement("#root");
 const PodcastDesc = ({goToTen, backToTen, isstopped, speed, handleSpeed, nowTime, time, muted, isMuted, id, title, photo, date, next, previous, isplaying, playPause, checkWidth, clickRef, completed}) => {
@@ -29,9 +30,9 @@ const PodcastDesc = ({goToTen, backToTen, isstopped, speed, handleSpeed, nowTime
                     <div className={'bouton'}>
                         {isstopped ? <button className={'startplay'} onClick={playPause}>
                             ECOUTER
-                            <GiSpeaker size={'1.5rem'}/>
+                            <FiRadio size={'1.5rem'}/>
                         </button> : !isplaying ? <button className={'play'} onClick={playPause}>
-                            A L'ECOUTE
+                            REPRENDRE
                             <GiSpeaker size={'1.5rem'}/>
                         </button>
                         : <button className={'play'} onClick={playPause}>

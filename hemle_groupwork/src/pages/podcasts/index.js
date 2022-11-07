@@ -80,7 +80,7 @@ const Podcasts = () => {
   const checkWidth = (e)=>{
     let width = clickRef.current.clientWidth;
     const offset = e.nativeEvent.offsetX;
-
+    console.log(width)
     const divprogress = offset / width * 100;
     audioPlayer.current.currentTime = divprogress / 100 * audioPlayer.current.duration;
     setCurrentSong({ ...currentSong, "progress": audioPlayer.current.currentTime})

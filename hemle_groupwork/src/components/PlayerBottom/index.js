@@ -17,12 +17,15 @@ const Playerbottom = ({stopMusic, speed, handleSpeed, muted, isMuted, time, nowT
           <ProgressBar checkWidth={checkWidth} className="progressBarbottom" completed={completed} clickRef={clickRef}/>
           <div className={"playerbottomContent"}>
               <div className={'aboutPodcast'}>
-                  <img alt={'view'} src={photo} className={'coverPlayerbottom'}/>
-                  <FiRadio size={"2rem"} className={"playerbottomRadiobutton buttonbottom2"}/>
-                  <div className={'podcastdetail'}>
-                      <div className={'playerbottomPodcastitle'}>{id}. {title}</div>
-                      <div className='buttonbottom2'>Youtube/ Nom Prénom</div>
-                  </div>
+                <div className={'coverPlayerbottom'} style={{backgroundImage:`url(${photo})`}}>
+                    {/* <img alt={'podcsat view'} src={photo}/> */}
+                </div>
+                {/* <img alt={'view'} src={photo} className={'coverPlayerbottom'}/> */}
+                <FiRadio size={"2rem"} className={"playerbottomRadiobutton buttonbottom2"}/>
+                <div className={'podcastdetail'}>
+                    <div className={'playerbottomPodcastitle'}>{id}. {title}</div>
+                    <div className='buttonbottom2'>Youtube/ Nom Prénom</div>
+                </div>
               </div>
               <div className={'buttonPlayerbottom'}>
                   <MdOutlineReplay10 onClick={backToTen} size={'2rem'} className={'buttonbottom buttonbottom2'}/>
