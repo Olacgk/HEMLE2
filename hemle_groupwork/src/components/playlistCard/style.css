@@ -5,6 +5,9 @@
     margin: 20px 0;
     border-radius: 10px;
 }
+.content:hover{
+    border: 2px solid #FFFF27;
+}
 .cardInfo{
     display: flex;
     padding: 16px 16px;
