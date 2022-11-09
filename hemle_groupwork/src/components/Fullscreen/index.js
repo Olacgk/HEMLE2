@@ -26,7 +26,7 @@ const Fullscreen = ({backToTen, goToTen, speed, id, handleSpeed, muted, isMuted,
     
     return(
         <div className={props.className}>
-            <BsArrowsAngleExpand onClick={()=>setOpenModal(true)} size={"1.5rem"}/>
+            <BsArrowsAngleExpand className="expandButton" onClick={()=>setOpenModal(true)} size={"1.5rem"}/>
             <Modal className={'fullscreenMod'} isOpen={openModal}>
                 {/* <Header /> */}
                 <div className="fullbackground" style={{backgroundImage:`url(${photo})`}}>

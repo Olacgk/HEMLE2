@@ -126,7 +126,6 @@
     letter-spacing: 1px;
 }
 .action{
-    cursor: pointer;
     font-size: 30px;
     display: flex;
 }
@@ -136,8 +135,11 @@
 .action2{
     margin: 0 20px;
 }
-.action3{
-    margin: 0 20px;
+.action2:hover{
+    color: #FFFF27;
+}
+.expandButton:hover{
+    color: #FFFF27;
 }
 
 @media (min-width: 576px) and (max-width:992px) {
