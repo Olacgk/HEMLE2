@@ -21,6 +21,9 @@
 .shareButton{
     font-size: 30px;
 }
+.shareButton:hover{
+    color: #FFFF27;
+}
 .socialmedia{
     display: flex;
     gap: 10px;

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import './style.css'
-import {FaFacebook, FaTwitter, FaInstagram, FaWhatsapp, FaTiktok} from 'react-icons/fa'
+import {FaFacebookF, FaTwitter, FaInstagram, FaWhatsapp, FaTiktok} from 'react-icons/fa'
 import {MdOutlineShare} from 'react-icons/md'
 
 export default function SocialMediaShare() {
@@ -10,6 +10,7 @@ export default function SocialMediaShare() {
     const shareClick = ()=>{
         setOpen(!open)
         open ? document.getElementsByClassName('showSocialMedia')[0].style.display = "flex" : document.getElementsByClassName('showSocialMedia')[0].style.display = "none"
+        open ? document.getElementsByClassName('shareButton')[0].style.color = '#FFFF27' : document.getElementsByClassName('shareButton')[0].style.color = 'white'
     }
 
   return (
@@ -17,7 +18,7 @@ export default function SocialMediaShare() {
         <div className='showSocialMedia'>
             <p>Partager sur:</p>
             <div className='socialmedia'>
-                <FaFacebook/>
+                <FaFacebookF/>
                 <FaTwitter/>
                 <FaInstagram/>
                 <FaWhatsapp/>
