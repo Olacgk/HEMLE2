@@ -41,7 +41,7 @@ export default function SocialMediaShare() {
                 <a href={`https://twitter.com/intent/tweet?url=${lien}`}>
                     <FaTwitter/>
                 </a>
-                <a href={`https://www.instagram.com/sharer/sharer.php?u=${lien}`}>
+                <a href={`instagram://send?text=${lien}`}>
                     <FaInstagram/>
                 </a>
             </div>
