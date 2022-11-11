@@ -1,0 +1,30 @@
+.socialMediaShare{
+    position: relative;
+    width: auto;
+    height: auto;
+    gap: 30px;
+}
+
+.showSocialMedia{
+    background-color: #292A2A;
+    padding: 8px;
+    border-radius: 5px;
+    position: absolute;
+    top: -65px;
+    right: -5px;
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 16px;
+
+}
+.shareButton{
+    font-size: 30px;
+}
+.shareButton:hover{
+    color: #FFFF27;
+}
+.socialmedia{
+    display: flex;
+    gap: 10px;
+}

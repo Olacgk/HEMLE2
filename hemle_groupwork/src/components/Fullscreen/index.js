@@ -13,21 +13,20 @@ const Fullscreen = ({backToTen, goToTen, speed, id, handleSpeed, muted, isMuted,
 
     const [openModal, setOpenModal] = useState(false);
 
+    openModal? document.body.style.overflow = 'hidden' : document.body.style.overflow = 'unset'
+
     const calculateTime = (secs) => {
         const minutes = Math.floor(secs / 60);
         const returnedMinutes = minutes < 10 ? `0${minutes}` : `${minutes}`;
         const seconds = Math.floor(secs % 60);
         const returnedSeconds = seconds < 10 ? `0${seconds}` : `${seconds}`;
         return `${returnedMinutes}:${returnedSeconds}`;
-      }
+    }
     
-    //   const OVERLAY_STYLE ={
-    //     zIndex: "1000",
-    //     overflowY: "auto"
-    //   }
+    
     return(
         <div className={props.className}>
-            <BsArrowsAngleExpand onClick={()=>setOpenModal(true)} size={"1.5rem"}/>
+            <BsArrowsAngleExpand className="expandButton" onClick={()=>setOpenModal(true)} size={"1.5rem"}/>
             <Modal className={'fullscreenMod'} isOpen={openModal}>
                 {/* <Header /> */}
                 <div className="fullbackground" style={{backgroundImage:`url(${photo})`}}>
@@ -37,11 +36,8 @@ const Fullscreen = ({backToTen, goToTen, speed, id, handleSpeed, muted, isMuted,
                                 <BiArrowBack onClick={()=>setOpenModal(false)} size={'2rem'}/>
                                 <BiShareAlt size={'2rem'}/>
                             </div>
-                            {/* <img src={photo} alt="cover podcast" /> */}
                         </div>
-                        <div className="fullscreenCover" style={{backgroundImage:`url(${photo})`}}>
-
-                        </div>
+                        <div className="fullscreenCover" style={{backgroundImage:`url(${photo})`}}></div>
                         <p className="fullscreenTitle">{id}. {title}</p>
                         <div className="fullscreenPlayer">
                             <div className="responsebutton">

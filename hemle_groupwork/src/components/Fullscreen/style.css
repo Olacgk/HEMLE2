@@ -3,10 +3,10 @@
     color: white;
     width: 100%;
     height: 100%;
-    overflow-y: hidden;
+    overflow: hidden;
 }
 .fullbackground{
-    background-image: url('../../assets/podcastCover.png');
+    /* background-image: url('../../assets/podcastCover.png'); */
     width: 100%;
     height: 100%;
     background-position: center;
@@ -20,7 +20,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    text-align: center;
+    /* text-align: center; */
 }
 .modalContent{
     text-align: center;
@@ -46,6 +46,7 @@
     font-weight: 600;
     font-size: 32px;
     line-height: 50px;
+    text-align: center;
 }
 .fullscreenPlayer{
     display: block;
@@ -66,18 +67,6 @@
     justify-content: center;
     gap: 20px;
 }
-.velocity {
-    appearance: none;
-    background: none;
-    color: white;
-    outline: none;
-    border: none;
-    text-align: center;
-    font-size: 18px;
-  }
-  .velocity option{
-    background-color: black;
-  }
 .fullbutton2{
     display: flex;
     gap: 20px;
@@ -85,7 +74,6 @@
 }
 .fullscreenProgress{
     margin: 20px 0;
-    left: 0;
 }
 .next{
     cursor: pointer;
@@ -94,6 +82,7 @@
     border: none;
     color: white;
     font-size: 16px;
+    gap: 5px;
 }
 .previous{
     cursor: pointer;
@@ -102,6 +91,7 @@
     border: none;
     color: white;
     font-size: 16px;
+    gap: 5px;
 }
 .exit{
     cursor: pointer;
@@ -112,10 +102,13 @@
         margin: 0 20px;
     }
     .fullscreenCover{
-        /* margin-top: 116px; */
         height: 172px;
         width: 189px;
 
+    }
+    .fullscreenPlayer{
+        display: block;
+        margin: 10px 20px;
     }
     .responseplay{
         display: none;
@@ -127,7 +120,7 @@
         font-size: 12px;
     }
     .fullscreenTitle{
-        margin: 12px 0;
+        margin: 12px 10px;
         font-weight: 600;
         font-size: 14px;
         line-height: 26px;
@@ -136,17 +129,15 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        gap: 10px;
     }
     .fullbuttonPlayer{
         justify-content: space-between;
-        margin: 0 10px;
     }
     .toHide{
         display: none;
     }
-    .fullscreenPlayer{
-        bottom: 10px;
-    }
+    
 }
 
 @media screen and (min-width:592px) and (max-width:768px) {
@@ -175,6 +166,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        gap: 20px;
     }
     .fullbuttonPlayer{
         justify-content: space-between;

@@ -1,12 +1,12 @@
 import React from "react";
 import './style.css'
 import {GiSpeaker} from "react-icons/gi";
-import { MdOutlineShare} from "react-icons/md";
 import {AiOutlineClockCircle} from "react-icons/ai";
 import Modal from "react-modal";
 import Fullscreen from "../Fullscreen";
 import { FaPause } from "react-icons/fa";
 import {FiRadio} from "react-icons/fi"
+import SocialMediaShare from "../SocialMediaShare";
 
 Modal.setAppElement("#root");
 const PodcastDesc = ({goToTen, backToTen, isstopped, speed, handleSpeed, nowTime, time, muted, isMuted, id, title, photo, date, next, previous, isplaying, playPause, checkWidth, clickRef, completed}) => {
@@ -42,7 +42,8 @@ const PodcastDesc = ({goToTen, backToTen, isstopped, speed, handleSpeed, nowTime
                         <div className={'action'}>
                             <Fullscreen className={"descFull"} goToTen={goToTen} backToTen={backToTen} speed={speed} handleSpeed={handleSpeed} nowTime={nowTime} time={time} isMuted={isMuted} muted={muted} completed={completed} checkWidth={checkWidth} clickRef={clickRef} isplaying={isplaying} playPause={playPause} photo={photo} title={title} next={next} previous={previous} id={id}/>
                             <AiOutlineClockCircle className="action2"/>
-                            <MdOutlineShare className="action3"/>
+                            {/* <MdOutlineShare className="action3"/> */}
+                            <SocialMediaShare/>
                         </div>
                     </div>
                 </div>
